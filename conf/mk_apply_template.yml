@@ -1,0 +1,9 @@
+merge_method: linear
+dtype: bfloat16
+models:
+  - model: __NEW_A__
+    weight: 1.0
+  - model: Qwen/Qwen3-30B-A3B-Thinking-2507
+    weight: 1.0
+  - model: Qwen/Qwen3-30B-A3B-Instruct-2507
+    weight: -1.0

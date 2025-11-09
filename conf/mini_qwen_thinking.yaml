@@ -1,0 +1,22 @@
+agent:
+  system_template: |
+    You are an autonomous SWE repair agent.
+    Include a <think>...</think> section before exactly one bash code block.
+    Finish with:
+    ```bash
+    echo COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT
+    ```
+  step_limit: 0
+  cost_limit: 0
+environment:
+  environment_class: singularity
+model:
+  model_name: "openai/Qwen3-30B-A3B-Thinking-2507"
+  model_kwargs:
+    custom_llm_provider: "openai"
+    api_base: "http://127.0.0.1:${PORT:-8000}/v1"
+    api_key: "hf-local"
+    temperature: 0.6
+    top_p: 0.95
+    top_k: 20
+    presence_penalty: 0.0

@@ -1,0 +1,28 @@
+hf_username: "oof-baroomf"
+
+model_a_base: "Qwen/Qwen3-30B-A3B-Instruct-2507"
+model_b_base: "Qwen/Qwen3-30B-A3B-Thinking-2507"
+
+repos:
+  sweb_dataset: "{user}/swe-mini-traces-{run_id}"          # dataset: preds.json, progress.json, all-preds.jsonl, traces.tgz
+  sft_dataset:  "{user}/sft-mini-{run_id}"                 # dataset: stripped SFT jsonl
+  a_ckpt_model: "{user}/Qwen3-30B-A3B-Instruct-A-r1-{run_id}-ckpts"    # model: trainer checkpoints
+  a_merged_model: "{user}/Qwen3-30B-A3B-Instruct-A-r1-{run_id}-merged" # model: periodic merged snapshots + final
+  b_new_model: "{user}/Qwen3-30B-A3B-Thinking-{run_id}-newB"           # model: final new B
+  code_dataset: "{user}/qwen3-loop-code-{run_id}"          # dataset: code snapshot tarballs
+  logs_dataset: "{user}/qwen3-loop-logs-{run_id}"          # dataset: log tarballs
+
+ports:
+  vllm: 8000
+
+swe:
+  dataset_repo: "MariusHobbhahn/SWE-bench-verified-mini"
+  split: "test"
+
+train:
+  max_len: 8192
+  lr: 5e-5
+  epochs: 1.0
+  bsz: 1
+  grad_acc: 8
+  save_steps: 100

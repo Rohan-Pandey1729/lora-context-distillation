@@ -1,0 +1,7 @@
+/.hf/
+/runs/
+/logs/
+/results/
+/secrets/hf_token
+*.tgz
+*.tar
