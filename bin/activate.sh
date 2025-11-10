@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-export MAMBA_ROOT_PREFIX="${MAMBA_ROOT_PREFIX:-$HOME/.mambaforge}"
+export MAMBA_ROOT_PREFIX="${MAMBA_ROOT_PREFIX:-.mambaforge}"
 if ! command -v micromamba >/dev/null 2>&1; then
   mkdir -p bin
   curl -Ls https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xvj bin/micromamba

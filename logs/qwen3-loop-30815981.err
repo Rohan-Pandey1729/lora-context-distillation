@@ -1,0 +1,12 @@
+/var/spool/slurmd/job30815981/slurm_script: line 17: .micromamba: command not found
+Error unknown MAMBA_EXE: "/mmfs1/gscratch/stf/rpande/lora-context-distillation/bin/.micromamba", filename must be mamba or micromamba
+warning  libmamba 'repo.anaconda.com', a commercial channel hosted by Anaconda.com, is used.
+    
+warning  libmamba Please make sure you understand Anaconda Terms of Services.
+    
+warning  libmamba See: https://legal.anaconda.com/policies/en/
+error    libmamba Could not solve for environment specs
+    The following package could not be installed
+    └─ cudatoolkit =12.4 * does not exist (perhaps a typo or a missing channel).
+critical libmamba Could not solve for environment specs
+critical libmamba Shell not initialized

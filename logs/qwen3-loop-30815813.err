@@ -1,0 +1,28 @@
+Error unknown MAMBA_EXE: "/mmfs1/gscratch/stf/rpande/lora-context-distillation/bin/.micromamba", filename must be mamba or micromamba
+warning  libmamba 'repo.anaconda.com', a commercial channel hosted by Anaconda.com, is used.
+    
+warning  libmamba Please make sure you understand Anaconda Terms of Services.
+    
+warning  libmamba See: https://legal.anaconda.com/policies/en/
+error    libmamba Could not write to file /mmfs1/home/rpande/.mambaforge/pkgs/cache/mambafl2mwp19zov: Disk quota exceeded
+warning  libmamba Download error (23) Failed writing received data to disk/application [https://conda.anaconda.org/nvidia/linux-64/repodata.json.zst]
+    Failure writing output to destination, passed 1369 returned 1370
+error    libmamba Could not write to file /mmfs1/home/rpande/.mambaforge/pkgs/cache/mambafr46sypeals: Disk quota exceeded
+warning  libmamba Download error (23) Failed writing received data to disk/application [https://conda.anaconda.org/conda-forge/noarch/repodata.json.zst]
+    Failure writing output to destination, passed 1369 returned 1370
+error    libmamba Could not write to file /mmfs1/home/rpande/.mambaforge/pkgs/cache/mambafugueqntrqn: Disk quota exceeded
+warning  libmamba Download error (23) Failed writing received data to disk/application [https://conda.anaconda.org/nvidia/noarch/repodata.json.zst]
+    Failure writing output to destination, passed 1369 returned 1370
+critical libmamba Multiple errors occurred:
+    Download error (23) Failed writing received data to disk/application [https://conda.anaconda.org/nvidia/noarch/repodata.json.zst]
+    Failure writing output to destination, passed 1369 returned 1370
+    Subdir conda-forge/noarch not loaded!
+    Subdir nvidia/noarch not loaded!
+    Subdir pkgs/main/noarch not loaded!
+    Subdir pkgs/r/noarch not loaded!
+    If you run into this error repeatedly, your package cache may be corrupted.
+    Please try running `mamba clean -a` to remove this cache before retrying the operation.
+    
+    If you still are having issues, please report the error on `mamba-org/mamba`'s issue tracker:
+    https://github.com/mamba-org/mamba/issues/new?assignees=&labels=&projects=&template=bug.yml
+critical libmamba Shell not initialized

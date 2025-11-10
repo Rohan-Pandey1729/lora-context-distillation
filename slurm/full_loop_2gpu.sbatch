@@ -1,18 +1,20 @@
 #!/bin/bash
 #SBATCH --job-name=qwen3-loop
-#SBATCH --account=<ACCOUNT>
-#SBATCH --partition=gpu-rtx6k
+#SBATCH --account=amath
+#SBATCH --partition=gpu-l40s
 #SBATCH --nodes=1
-#SBATCH --gpus=rtx6k:2
+#SBATCH --gpus=l40s:2
 #SBATCH --cpus-per-task=24
 #SBATCH --mem=128G
-#SBATCH --time=3-00:00:00
+#SBATCH --time=1-00:00:00
 #SBATCH --output=logs/%x-%j.out
 #SBATCH --error=logs/%x-%j.err
 #SBATCH --chdir=.
 #SBATCH --export=ALL
 
 set -euo pipefail
+
+eval "$(.micromamba shell hook --shell bash)"
 source bin/activate.sh
 : "${RUN_ID:?Set RUN_ID env var, e.g. RUN_ID=mini-$(date +%Y%m%d_%H%M%S)}"
 
