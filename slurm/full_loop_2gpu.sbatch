@@ -13,86 +13,81 @@
 #SBATCH --export=ALL
 
 set -euo pipefail
+umask 077
+mkdir -p logs
 
-eval "$(.micromamba shell hook --shell bash)"
+# Require HF token for the whole job
+: "${HF_TOKEN:=$(cat secrets/hf_token 2>/dev/null || true)}"
+if [[ -z "${HF_TOKEN:-}" ]]; then
+  echo "[fatal] HF_TOKEN is required. Export HF_TOKEN or create secrets/hf_token" >&2
+  exit 42
+fi
+export HF_TOKEN
+export HUGGING_FACE_HUB_TOKEN="$HF_TOKEN"
+
+# RUN_ID defaults to slurm job id
+export RUN_ID="${RUN_ID:-qwen3-${SLURM_JOB_ID:-manual}}"
+
+# Use project-local micromamba env and activate
+export MAMBA_ROOT_PREFIX="$PWD/.mamba"
+export CONDA_PKGS_DIRS="$MAMBA_ROOT_PREFIX/pkgs"
 source bin/activate.sh
-: "${RUN_ID:?Set RUN_ID env var, e.g. RUN_ID=mini-$(date +%Y%m%d_%H%M%S)}"
 
-export HF_TOKEN="$(cat secrets/hf_token)"
-export PORT=$(python - <<PY
-import socket
-s=socket.socket(); s.bind(("",0)); print(s.getsockname()[1]); s.close()
+# Read config for model and port
+PORT="$(python - <<'PY'
+from pipeline.util import load_conf
+print(load_conf()["ports"]["vllm"])
 PY
-)
-echo "[info] RUN_ID=$RUN_ID PORT=$PORT"
+)"
+MODEL_B="$(python - <<'PY'
+from pipeline.util import load_conf
+print(load_conf()["model_b_base"])
+PY
+)"
 
-# snapshot the exact code used for this run to HF
-python -m pipeline.snap_and_sync code
-
-# 1) start vLLM for model B on 2 GPUs
-./bin/start_vllm_server.sh "Qwen/Qwen3-30B-A3B-Thinking-2507" "$PORT" 2 "logs/vllm_${SLURM_JOB_ID}" &
+# Ensure vLLM port is free, then launch server
+python bin/kill_port.py "$PORT" || true
+LOGDIR="logs/vllm_${SLURM_JOB_ID}"
+bash bin/start_vllm_server.sh "$MODEL_B" "$PORT" 2 "$LOGDIR" &
 VLLM_PID=$!
 
-# readiness check
+# Wait for readiness
 python - <<PY
 from pipeline.util import wait_vllm_ready
-import os
-wait_vllm_ready(int(os.environ["PORT"]))
-print("vLLM is ready")
+wait_vllm_ready(port=int("$PORT"), timeout_s=900)
+print("vLLM ready")
 PY
 
-# point mini-swe-agent at the local endpoint
-python - <<PY
-import os, yaml
-with open("conf/mini_qwen_thinking.yaml","r") as f:
-    c=yaml.safe_load(f)
-c["model"]["model_kwargs"]["api_base"]=f"http://127.0.0.1:{os.environ[PORT]}/v1"
-open("conf/mini_qwen_thinking.yaml","w").write(yaml.safe_dump(c))
-PY
-
-# 2) run SWEBench mini with continuous HF sync of preds.json, progress.json, all-preds.jsonl
+# SWE stage - produces preds.json and all-preds.jsonl and uploads continuously
 python -m pipeline.swe_runner
 
-# stop server and snapshot logs
-python bin/kill_port.py "$PORT" || true
-kill -9 $VLLM_PID || true
-sleep 5
-python -m pipeline.snap_and_sync logs
+# Strip <think> and produce SFT JSONL for A
+python -m pipeline.strip_thinking \
+  --preds_json "runs/${RUN_ID}/swe/preds.json" \
+  --out_jsonl  "runs/${RUN_ID}/sft/sft_qwenA_from_B_mini.jsonl"
 
-# 3) strip thinking and upload SFT jsonl
-python - <<PY
-from pipeline.util import load_conf
-from pipeline.hf_sync import ensure_repo, upload_path
-import subprocess, os
-cfg=load_conf()
-run_id=cfg["run_id"]
-preds=f"runs/{run_id}/swe/preds.json"
-out_jsonl=f"runs/{run_id}/sft/sft_qwenA_from_B_mini.jsonl"
-os.makedirs(f"runs/{run_id}/sft", exist_ok=True)
-subprocess.check_call(["python","-m","pipeline.strip_thinking","--preds_json",preds,"--out_jsonl",out_jsonl])
-repo=cfg["repos_fmt"]["sft_dataset"]; ensure_repo(repo,"dataset"); upload_path(repo, out_jsonl, "dataset")
-PY
+# Train A with Unsloth and push checkpoints and merged snapshots
+python -m pipeline.train_unsloth_lora
 
-# 4) train A on 2 GPUs + push ckpts and merged snapshots as we go
-export NCCL_P2P_DISABLE=0
-export NCCL_IB_DISABLE=0
-torchrun --nproc_per_node=2 -m pipeline.train_unsloth_lora
-
-# snapshot logs after training
-python -m pipeline.snap_and_sync logs
-
-# 5) apply linear DIFF to get new B and upload
+# Apply linear DIFF to produce new B and push it
 python -m pipeline.apply_diff_linear
-python - <<PY
+python - <<'PY'
 from pipeline.util import load_conf
 from pipeline.hf_sync import upload_path, ensure_repo
 import os
-cfg=load_conf()
-repo=cfg["repos_fmt"]["b_new_model"]
-ensure_repo(repo,"model")
-upload_path(repo, f"runs/{cfg[run_id]}/B_new", "model")
+cfg = load_conf()
+run_id = cfg["run_id"]
+repo = cfg["repos_fmt"]["b_new_model"]
+ensure_repo(repo, "model")
+upload_path(repo, f"runs/{run_id}/B_new", "model")
+print("Uploaded new B")
 PY
 
-# final log snapshot
-python -m pipeline.snap_and_sync logs
+# Stop vLLM
+kill -9 "$VLLM_PID" 2>/dev/null || true
+python bin/kill_port.py "$PORT" || true
+
+# Snapshot logs
+python -m pipeline.snap_and_sync logs || true
+
 echo "[done] full loop completed"
