@@ -1,0 +1,9 @@
+info     libmamba ****************** Backtrace Start ******************
+debug    libmamba Loading configuration
+trace    libmamba Compute configurable 'create_base'
+trace    libmamba Compute configurable 'no_env'
+trace    libmamba Compute configurable 'no_rc'
+error    libmamba Bad conversion of configurable 'no_rc' from environment variable 'MAMBA_NO_RC' with value '1' : yaml-cpp: error at line 1, column 1: bad conversion
+critical libmamba yaml-cpp: error at line 1, column 1: bad conversion
+info     libmamba ****************** Backtrace End ********************
+bin/activate.sh: line 24: micromamba: command not found
