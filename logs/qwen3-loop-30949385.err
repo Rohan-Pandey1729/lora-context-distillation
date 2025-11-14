@@ -1,0 +1,11 @@
+downloading uv 0.9.9 x86_64-unknown-linux-gnu
+Using CPython 3.11.9 interpreter at: /mmfs1/sw/contrib/coenv-src/python/3.11.9/bin/python3.11
+warning: The requested interpreter resolved to Python 3.11.9, which is incompatible with the project's Python requirement: `>=3.10, <=3.11` (from `project.requires-python`)
+Creating virtual environment at: /gscratch/stf/rpande/lora-context-distillation/.venv
+warning: A virtual environment already exists at `/gscratch/stf/rpande/lora-context-distillation/.venv`. In the future, uv will require `--clear` to replace it
+Activate with: source /gscratch/stf/rpande/lora-context-distillation/.venv/bin/activate
+Downloading cpython-3.10.19-linux-x86_64-gnu (download) (27.2MiB)
+error: Failed to extract archive: cpython-3.10.19-20251031-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz
+  Caused by: I/O operation failed during extraction
+  Caused by: failed to unpack `/mmfs1/home/rpande/.local/share/uv/python/.temp/.tmpiozo5E/python/bin/python3-config`
+  Caused by: Disk quota exceeded (os error 122)
