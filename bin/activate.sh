@@ -19,7 +19,7 @@ fi
 # install uv locally if missing
 mkdir -p "$PWD/bin"
 if ! command -v uv >/dev/null 2>&1; then
-  curl -LsSf https://astral.sh/uv/install.sh | sh -s -- -y --bin-dir "$PWD/bin"
+  curl -LsSf https://astral.sh/uv/install.sh | sh -s -- --bin-dir "$PWD/bin"
   export PATH="$PWD/bin:$PATH"
 fi
 
