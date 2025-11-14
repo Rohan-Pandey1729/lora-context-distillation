@@ -19,11 +19,17 @@ fi
 # install uv locally if missing
 mkdir -p "$PWD/bin"
 if ! command -v uv >/dev/null 2>&1; then
-  curl -LsSf https://astral.sh/uv/install.sh | sh -s -- --bin-dir "$PWD/bin"
+  curl -LsSf https://astral.sh/uv/install.sh | env UV_INSTALL_DIR="$PWD/bin" UV_NO_MODIFY_PATH=1 sh
   export PATH="$PWD/bin:$PATH"
+  uv --version
 fi
 
-# require python3.10 on the node
+export UV_CACHE_DIR="$PWD/.cache/uv"
+export UV_AUTH_DIR="$PWD/share/uv"
+export UV_PYTHON_INSTALL_DIR="$PWD/bin/uvpython"
+export PATH="$PWD/bin/uvpython:$PATH"
+uv python install 3.10
+
 if ! command -v python3.10 >/dev/null 2>&1; then
   echo "[fatal] python3.10 is required in PATH" >&2; exit 42
 fi
