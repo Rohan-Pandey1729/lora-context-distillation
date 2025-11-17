@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH --job-name=qwen3-loop
 #SBATCH --account=amath
-#SBATCH --partition=gpu-rtx6k
+#SBATCH --partition=gpu-l40s
 #SBATCH --nodes=1
-#SBATCH --gpus=rtx6k:2
+#SBATCH --gpus=l40s:2
 #SBATCH --cpus-per-task=24
 #SBATCH --mem=128G
 #SBATCH --time=2:30:00

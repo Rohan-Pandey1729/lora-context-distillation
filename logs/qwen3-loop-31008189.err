@@ -1,0 +1,7 @@
+downloading uv 0.9.9 x86_64-unknown-linux-gnu
+warning: Failed to install executable for cpython-3.10.19-linux-x86_64-gnu
+  Caused by: Executable already exists at `/mmfs1/home/rpande/.local/bin/python3.10` but is not managed by uv; use `--force` to replace it
+Using CPython 3.10.19
+Creating virtual environment at: /gscratch/stf/rpande/lora-context-distillation/.venv
+Activate with: source /gscratch/stf/rpande/lora-context-distillation/.venv/bin/activate
+error: Unable to find lockfile at `uv.lock`. To create a lockfile, run `uv lock` or `uv sync`.

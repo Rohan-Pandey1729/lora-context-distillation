@@ -1,0 +1,6 @@
+downloading uv 0.9.9 x86_64-unknown-linux-gnu
+Resolved 170 packages in 5ms
+Audited 163 packages in 96ms
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'torch'

@@ -28,7 +28,6 @@ export UV_CACHE_DIR="$PWD/.cache/uv"
 export UV_AUTH_DIR="$PWD/share/uv"
 export UV_PYTHON_INSTALL_DIR="$PWD/bin/uvpython"
 export PATH="$PWD/bin/uvpython:$PATH"
-uv python install 3.10
 
 if ! command -v python3.10 >/dev/null 2>&1; then
   echo "[fatal] python3.10 is required in PATH" >&2; exit 42
@@ -40,15 +39,9 @@ export UV_CACHE_DIR="$PWD/.cache/uv"
 export PIP_CACHE_DIR="$PWD/.cache/pip"
 mkdir -p .hf .cache logs runs results
 export HF_HOME="$PWD/.hf"
-export TRANSFORMERS_CACHE="$PWD/.hf/transformers"
 
-uv venv --python python3.10
+uv sync
 
-# first run creates a lock, later runs must match it exactly
-if [[ ! -f uv.lock ]]; then
-  uv lock
-fi
-uv sync --frozen
 
 # verify HF and CUDA in the env
 python - <<'PY'
