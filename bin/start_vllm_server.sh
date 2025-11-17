@@ -16,18 +16,17 @@ if ! nvidia-smi >/dev/null 2>&1; then
   echo "[fatal] nvidia-smi failed - GPU not usable" >&2
   exit 1
 fi
-python - <<'PY'
-import sys
-try:
-    import torch
-except Exception as e:
-    print(f"[fatal] PyTorch import failed: {e}", file=sys.stderr); sys.exit(1)
+
+# sanity check torch cuda inside the uv env
+uv run python - <<'PY'
+import sys, torch
 if not torch.cuda.is_available():
-    print("[fatal] CUDA is required for vLLM", file=sys.stderr); sys.exit(1)
+    print("[fatal] CUDA is required for vLLM", file=sys.stderr)
+    sys.exit(1)
 PY
 
-# Start vLLM OpenAI-compatible server
-exec python -m vllm.entrypoints.openai.api_server \
+# Start vLLM OpenAI server using uv run
+exec uv run python -m vllm.entrypoints.openai.api_server \
   --host 0.0.0.0 --port "$PORT" \
   --model "$MODEL" \
   --dtype auto \
