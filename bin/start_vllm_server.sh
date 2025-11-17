@@ -16,7 +16,7 @@ if ! nvidia-smi >/dev/null 2>&1; then
   echo "[fatal] nvidia-smi failed - GPU not usable" >&2
   exit 1
 fi
-
+echo "vllm not initialized yet, starting"
 # sanity check torch cuda inside the uv env
 uv run python - <<'PY'
 import sys, torch

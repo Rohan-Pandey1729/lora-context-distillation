@@ -44,7 +44,7 @@ uv sync
 
 
 # verify HF and CUDA in the env
-python - <<'PY'
+uv run python - <<'PY'
 import os, sys, torch
 from huggingface_hub import HfApi
 HfApi(token=os.environ["HF_TOKEN"]).whoami()

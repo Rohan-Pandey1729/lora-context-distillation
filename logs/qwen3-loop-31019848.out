@@ -1,0 +1,8 @@
+no checksums to verify
+installing to /gscratch/stf/rpande/lora-context-distillation/bin
+  uv
+  uvx
+everything's installed!
+uv 0.9.9
+CUDA OK - devices: 2
+vllm not initialized yet, starting
