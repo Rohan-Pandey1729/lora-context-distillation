@@ -1,3 +1,4 @@
 downloading uv 0.9.9 x86_64-unknown-linux-gnu
 Resolved 170 packages in 3ms
 Audited 163 packages in 79ms
+[2025-11-16T21:29:47.337] error: *** JOB 31019848 ON g3035 CANCELLED AT 2025-11-16T21:29:47 DUE to SIGNAL Terminated ***
