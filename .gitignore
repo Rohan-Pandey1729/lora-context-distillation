@@ -6,6 +6,8 @@
 /.mambaforge/
 /.micromamba/
 /bin/uv/
+/bin/uv
+/bin/uvx
 /env/
 /pipeline/__pycache__/
 uv.lock
