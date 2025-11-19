@@ -5,3 +5,7 @@
 *.tar
 /.mambaforge/
 /.micromamba/
+/bin/uv/
+/env/
+/pipeline/__pycache__/
+uv.lock
