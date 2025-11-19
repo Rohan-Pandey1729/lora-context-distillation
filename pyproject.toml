@@ -30,6 +30,7 @@ dependencies = [
 override-dependencies = [
     "pydantic==2.12.0",
     "torch==2.5.1+cu121"
+    "torchvision==0.20.1+cu121"
 ]
 
 [[tool.uv.index]]
