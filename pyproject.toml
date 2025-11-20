@@ -35,9 +35,9 @@ name = 'pypi'
 url = 'https://pypi.org/simple'
 
 [[tool.uv.index]]
-name = 'pytorch-cu129'
-url = "https://download.pytorch.org/whl/cu129"
+name = 'pytorch-cu130'
+url = "https://download.pytorch.org/whl/cu130"
 
 [tool.uv.sources]
-torch = { index = "pytorch-cu129" }
-torchvision = { index = "pytorch-cu129" }
+torch = { index = "pytorch-cu130" }
+torchvision = { index = "pytorch-cu130" }
