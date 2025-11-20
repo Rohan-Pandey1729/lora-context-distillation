@@ -1,0 +1,66 @@
+[1;36m(EngineCore_DP0 pid=78987)[0;0m Process EngineCore_DP0:
+[1;36m(EngineCore_DP0 pid=78987)[0;0m Traceback (most recent call last):
+[1;36m(EngineCore_DP0 pid=78987)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+[1;36m(EngineCore_DP0 pid=78987)[0;0m     self.run()
+[1;36m(EngineCore_DP0 pid=78987)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/multiprocessing/process.py", line 108, in run
+[1;36m(EngineCore_DP0 pid=78987)[0;0m     self._target(*self._args, **self._kwargs)
+[1;36m(EngineCore_DP0 pid=78987)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/engine/core.py", line 846, in run_engine_core
+[1;36m(EngineCore_DP0 pid=78987)[0;0m     raise e
+[1;36m(EngineCore_DP0 pid=78987)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/engine/core.py", line 833, in run_engine_core
+[1;36m(EngineCore_DP0 pid=78987)[0;0m     engine_core = EngineCoreProc(*args, **kwargs)
+[1;36m(EngineCore_DP0 pid=78987)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/engine/core.py", line 606, in __init__
+[1;36m(EngineCore_DP0 pid=78987)[0;0m     super().__init__(
+[1;36m(EngineCore_DP0 pid=78987)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/engine/core.py", line 102, in __init__
+[1;36m(EngineCore_DP0 pid=78987)[0;0m     self.model_executor = executor_class(vllm_config)
+[1;36m(EngineCore_DP0 pid=78987)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/executor/multiproc_executor.py", line 96, in __init__
+[1;36m(EngineCore_DP0 pid=78987)[0;0m     super().__init__(vllm_config)
+[1;36m(EngineCore_DP0 pid=78987)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/executor/abstract.py", line 101, in __init__
+[1;36m(EngineCore_DP0 pid=78987)[0;0m     self._init_executor()
+[1;36m(EngineCore_DP0 pid=78987)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/executor/multiproc_executor.py", line 171, in _init_executor
+[1;36m(EngineCore_DP0 pid=78987)[0;0m     self.workers = WorkerProc.wait_for_ready(unready_workers)
+[1;36m(EngineCore_DP0 pid=78987)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/executor/multiproc_executor.py", line 653, in wait_for_ready
+[1;36m(EngineCore_DP0 pid=78987)[0;0m     raise e from None
+[1;36m(EngineCore_DP0 pid=78987)[0;0m Exception: WorkerProc initialization failed due to an exception in a background process. See stack trace for root cause.
+[1;36m(APIServer pid=73517)[0;0m Traceback (most recent call last):
+[1;36m(APIServer pid=73517)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[1;36m(APIServer pid=73517)[0;0m     return _run_code(code, main_globals, None,
+[1;36m(APIServer pid=73517)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/runpy.py", line 86, in _run_code
+[1;36m(APIServer pid=73517)[0;0m     exec(code, run_globals)
+[1;36m(APIServer pid=73517)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 2096, in <module>
+[1;36m(APIServer pid=73517)[0;0m     uvloop.run(run_server(args))
+[1;36m(APIServer pid=73517)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/uvloop/__init__.py", line 82, in run
+[1;36m(APIServer pid=73517)[0;0m     return loop.run_until_complete(wrapper())
+[1;36m(APIServer pid=73517)[0;0m   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+[1;36m(APIServer pid=73517)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/uvloop/__init__.py", line 61, in wrapper
+[1;36m(APIServer pid=73517)[0;0m     return await main
+[1;36m(APIServer pid=73517)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 2024, in run_server
+[1;36m(APIServer pid=73517)[0;0m     await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+[1;36m(APIServer pid=73517)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 2043, in run_server_worker
+[1;36m(APIServer pid=73517)[0;0m     async with build_async_engine_client(
+[1;36m(APIServer pid=73517)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/contextlib.py", line 199, in __aenter__
+[1;36m(APIServer pid=73517)[0;0m     return await anext(self.gen)
+[1;36m(APIServer pid=73517)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 195, in build_async_engine_client
+[1;36m(APIServer pid=73517)[0;0m     async with build_async_engine_client_from_engine_args(
+[1;36m(APIServer pid=73517)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/contextlib.py", line 199, in __aenter__
+[1;36m(APIServer pid=73517)[0;0m     return await anext(self.gen)
+[1;36m(APIServer pid=73517)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 236, in build_async_engine_client_from_engine_args
+[1;36m(APIServer pid=73517)[0;0m     async_llm = AsyncLLM.from_vllm_config(
+[1;36m(APIServer pid=73517)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/utils/func_utils.py", line 116, in inner
+[1;36m(APIServer pid=73517)[0;0m     return fn(*args, **kwargs)
+[1;36m(APIServer pid=73517)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/engine/async_llm.py", line 203, in from_vllm_config
+[1;36m(APIServer pid=73517)[0;0m     return cls(
+[1;36m(APIServer pid=73517)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/engine/async_llm.py", line 133, in __init__
+[1;36m(APIServer pid=73517)[0;0m     self.engine_core = EngineCoreClient.make_async_mp_client(
+[1;36m(APIServer pid=73517)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/engine/core_client.py", line 121, in make_async_mp_client
+[1;36m(APIServer pid=73517)[0;0m     return AsyncMPClient(*client_args)
+[1;36m(APIServer pid=73517)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/engine/core_client.py", line 808, in __init__
+[1;36m(APIServer pid=73517)[0;0m     super().__init__(
+[1;36m(APIServer pid=73517)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/engine/core_client.py", line 469, in __init__
+[1;36m(APIServer pid=73517)[0;0m     with launch_core_engines(vllm_config, executor_class, log_stats) as (
+[1;36m(APIServer pid=73517)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/contextlib.py", line 142, in __exit__
+[1;36m(APIServer pid=73517)[0;0m     next(self.gen)
+[1;36m(APIServer pid=73517)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/engine/utils.py", line 907, in launch_core_engines
+[1;36m(APIServer pid=73517)[0;0m     wait_for_engine_startup(
+[1;36m(APIServer pid=73517)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/engine/utils.py", line 964, in wait_for_engine_startup
+[1;36m(APIServer pid=73517)[0;0m     raise RuntimeError(
+[1;36m(APIServer pid=73517)[0;0m RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {}

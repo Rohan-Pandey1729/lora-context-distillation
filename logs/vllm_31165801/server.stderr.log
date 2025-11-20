@@ -1,0 +1,77 @@
+[1;36m(Worker_TP0 pid=81541)[0;0m Exception in thread Thread-1 (_report_usage_worker):
+[1;36m(Worker_TP0 pid=81541)[0;0m OSError: [Errno 122] Disk quota exceeded
+[1;36m(Worker_TP0 pid=81541)[0;0m 
+[1;36m(Worker_TP0 pid=81541)[0;0m During handling of the above exception, another exception occurred:
+[1;36m(Worker_TP0 pid=81541)[0;0m 
+[1;36m(Worker_TP0 pid=81541)[0;0m Traceback (most recent call last):
+[1;36m(Worker_TP0 pid=81541)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+[1;36m(Worker_TP0 pid=81541)[0;0m     self.run()
+[1;36m(Worker_TP0 pid=81541)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/threading.py", line 953, in run
+[1;36m(Worker_TP0 pid=81541)[0;0m     self._target(*self._args, **self._kwargs)
+[1;36m(Worker_TP0 pid=81541)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/usage/usage_lib.py", line 174, in _report_usage_worker
+[1;36m(Worker_TP0 pid=81541)[0;0m     self._report_usage_once(model_architecture, usage_context, extra_kvs)
+[1;36m(Worker_TP0 pid=81541)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/usage/usage_lib.py", line 258, in _report_usage_once
+[1;36m(Worker_TP0 pid=81541)[0;0m     self._write_to_file(data)
+[1;36m(Worker_TP0 pid=81541)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/usage/usage_lib.py", line 289, in _write_to_file
+[1;36m(Worker_TP0 pid=81541)[0;0m     with open(_USAGE_STATS_JSON_PATH, "a") as f:
+[1;36m(Worker_TP0 pid=81541)[0;0m OSError: [Errno 122] Disk quota exceeded
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/tvm_ffi/utils/_build_optional_torch_c_dlpack.py", line 836, in <module>
+    main()
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/tvm_ffi/utils/_build_optional_torch_c_dlpack.py", line 829, in main
+    build_ninja(build_dir=str(build_dir))
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/tvm_ffi/cpp/extension.py", line 353, in build_ninja
+    raise RuntimeError("\n".join(msg))
+RuntimeError: ninja exited with status 1
+stdout:
+[1/2] c++ -MMD -MF main.o.d -std=c++17 -fPIC -O3 -DBUILD_WITH_CUDA -D_GLIBCXX_USE_CXX11_ABI=1 -I/mmfs1/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/tvm_ffi/include -I/mmfs1/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/include/python3.10 -I/mmfs1/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/torch/include -I/mmfs1/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/usr/local/cuda-12.9/include -c /tmp/tvm-ffi-torch-c-dlpack-9es0jblc/addon.cc -o main.o
+FAILED: [code=1] main.o 
+c++ -MMD -MF main.o.d -std=c++17 -fPIC -O3 -DBUILD_WITH_CUDA -D_GLIBCXX_USE_CXX11_ABI=1 -I/mmfs1/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/tvm_ffi/include -I/mmfs1/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/include/python3.10 -I/mmfs1/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/torch/include -I/mmfs1/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/usr/local/cuda-12.9/include -c /tmp/tvm-ffi-torch-c-dlpack-9es0jblc/addon.cc -o main.o
+In file included from /mmfs1/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/torch/include/c10/util/CallOnce.h:4,
+                 from /mmfs1/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/torch/include/ATen/Context.h:25,
+                 from /mmfs1/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/torch/include/ATen/ATen.h:7,
+                 from /mmfs1/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/torch/include/ATen/DLConvertor.h:3,
+                 from /tmp/tvm-ffi-torch-c-dlpack-9es0jblc/addon.cc:3:
+/mmfs1/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/torch/include/c10/util/C++17.h:13:2: error: #error "You're trying to build PyTorch with a too old version of GCC. We need GCC 9 or later."
+ #error \
+  ^~~~~
+In file included from /tmp/tvm-ffi-torch-c-dlpack-9es0jblc/addon.cc:8:
+/mmfs1/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/torch/include/c10/cuda/CUDAStream.h:3:10: fatal error: cuda_runtime_api.h: No such file or directory
+ #include <cuda_runtime_api.h>
+          ^~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+[1;36m(Worker_TP0 pid=81541)[0;0m /gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/tvm_ffi/_optional_torch_c_dlpack.py:106: UserWarning: Failed to JIT torch c dlpack extension, EnvTensorAllocator will not be enabled.
+[1;36m(Worker_TP0 pid=81541)[0;0m You may try AOT-module via `pip install torch-c-dlpack-ext`
+[1;36m(Worker_TP0 pid=81541)[0;0m   warnings.warn(
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/tvm_ffi/utils/_build_optional_torch_c_dlpack.py", line 836, in <module>
+    main()
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/tvm_ffi/utils/_build_optional_torch_c_dlpack.py", line 829, in main
+    build_ninja(build_dir=str(build_dir))
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/tvm_ffi/cpp/extension.py", line 353, in build_ninja
+    raise RuntimeError("\n".join(msg))
+RuntimeError: ninja exited with status 1
+stdout:
+[1/2] c++ -MMD -MF main.o.d -std=c++17 -fPIC -O3 -DBUILD_WITH_CUDA -D_GLIBCXX_USE_CXX11_ABI=1 -I/mmfs1/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/tvm_ffi/include -I/mmfs1/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/include/python3.10 -I/mmfs1/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/torch/include -I/mmfs1/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/usr/local/cuda-12.9/include -c /tmp/tvm-ffi-torch-c-dlpack-ktwb8uq7/addon.cc -o main.o
+FAILED: [code=1] main.o 
+c++ -MMD -MF main.o.d -std=c++17 -fPIC -O3 -DBUILD_WITH_CUDA -D_GLIBCXX_USE_CXX11_ABI=1 -I/mmfs1/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/tvm_ffi/include -I/mmfs1/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/include/python3.10 -I/mmfs1/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/torch/include -I/mmfs1/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/usr/local/cuda-12.9/include -c /tmp/tvm-ffi-torch-c-dlpack-ktwb8uq7/addon.cc -o main.o
+In file included from /mmfs1/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/torch/include/c10/util/CallOnce.h:4,
+                 from /mmfs1/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/torch/include/ATen/Context.h:25,
+                 from /mmfs1/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/torch/include/ATen/ATen.h:7,
+                 from /mmfs1/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/torch/include/ATen/DLConvertor.h:3,
+                 from /tmp/tvm-ffi-torch-c-dlpack-ktwb8uq7/addon.cc:3:
+/mmfs1/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/torch/include/c10/util/C++17.h:13:2: error: #error "You're trying to build PyTorch with a too old version of GCC. We need GCC 9 or later."
+ #error \
+  ^~~~~
+In file included from /tmp/tvm-ffi-torch-c-dlpack-ktwb8uq7/addon.cc:8:
+/mmfs1/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/torch/include/c10/cuda/CUDAStream.h:3:10: fatal error: cuda_runtime_api.h: No such file or directory
+ #include <cuda_runtime_api.h>
+          ^~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+[1;36m(Worker_TP1 pid=81542)[0;0m /gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/tvm_ffi/_optional_torch_c_dlpack.py:106: UserWarning: Failed to JIT torch c dlpack extension, EnvTensorAllocator will not be enabled.
+[1;36m(Worker_TP1 pid=81542)[0;0m You may try AOT-module via `pip install torch-c-dlpack-ext`
+[1;36m(Worker_TP1 pid=81542)[0;0m   warnings.warn(
