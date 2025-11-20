@@ -20,7 +20,7 @@ swe:
   split: "test"
 
 train:
-  max_len: 8192
+  max_len: 12288
   lr: 5e-5
   epochs: 1.0
   bsz: 1

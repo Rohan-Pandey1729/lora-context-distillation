@@ -1,24 +1,19 @@
 agent:
+  # Stay close to the default mini-swe-agent shell-loop prompt; keep <think> so strip_thinking can clean training data.
   system_template: |
-    You are a SWE-bench repair agent using the mini-swe-agent interface.
+    You are a helpful assistant that interacts with a computer shell to solve programming tasks.
     Respond with exactly two parts:
     <think>
-    concise reasoning about what you will do next, including safety checks and intended commands.
+    Brief reasoning about the single command you will run next.
     </think>
     ```bash
-    one non-interactive bash command (chain with && or || if needed)
+    one non-interactive bash command (use && or || to chain if needed)
     ```
-    Keep the <think> block short so it can be stripped from training data.
-    To finish after the task is fully solved, emit only:
-    ```bash
-    echo COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT
-    ```
+    Failure to follow this format will cause your response to be rejected.
   instance_template: |
-    You are fixing this SWE-bench instance:
     {{task}}
 
-    Work step-by-step: inspect code, reproduce the failure when possible, edit files, and verify fixes with the repo's tests or linters.
-    Only the <think> block may contain explanations; the bash block must only contain commands.
+    Follow the workflow: inspect, reproduce if possible, edit, verify. Only the <think> block may contain explanations; the bash block must only contain commands.
   action_observation_template: |
     <returncode>{{output.returncode}}</returncode>
     {% if output.output | length < 10000 -%}
@@ -29,9 +24,6 @@ agent:
     <warning>
     The output of your last command was too long.
     Please try a different command that produces less output.
-    If you're looking at a file you can try use head, tail or sed to view a smaller number of lines selectively.
-    If you're using grep or find and it produced too much output, you can use a more selective search pattern.
-    If you really need to see something from the full command's output, you can redirect output to a file and then search in that file.
     </warning>
     {%- set elided_chars = output.output | length - 10000 -%}
     <output_head>
@@ -63,7 +55,7 @@ model:
     custom_llm_provider: "openai"
     api_base: "http://127.0.0.1:${PORT:-8000}/v1"
     api_key: "hf-local"
-    temperature: 0.4
-    top_p: 0.9
+    temperature: 0.6
+    top_p: 0.95
     top_k: 20
     presence_penalty: 0.0
