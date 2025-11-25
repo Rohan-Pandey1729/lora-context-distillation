@@ -16,6 +16,18 @@ if ! command -v nvidia-smi >/dev/null 2>&1 || ! nvidia-smi >/dev/null 2>&1; then
   echo "[fatal] NVIDIA driver not available" >&2; exit 42
 fi
 
+# keep all caches local to the repo to avoid filling $HOME quotas
+export BASE_CACHE_DIR="${BASE_CACHE_DIR:-$PWD/.cache}"
+mkdir -p "$BASE_CACHE_DIR"/{triton,torch,torch_extensions,inductor,hf,vllm,pip}
+export XDG_CACHE_HOME="$BASE_CACHE_DIR"
+export TRITON_CACHE_DIR="$BASE_CACHE_DIR/triton"
+export TORCH_HOME="$BASE_CACHE_DIR/torch"
+export TORCH_EXTENSIONS_DIR="$BASE_CACHE_DIR/torch_extensions"
+export TORCHINDUCTOR_CACHE_DIR="$BASE_CACHE_DIR/inductor"
+export HF_HOME="$BASE_CACHE_DIR/hf"
+export VLLM_CACHE_DIR="$BASE_CACHE_DIR/vllm"
+export VLLM_USAGE_STATS=0
+
 # install uv locally if missing
 mkdir -p "$PWD/bin"
 if ! command -v uv >/dev/null 2>&1; then
@@ -38,9 +50,7 @@ export UV_PROJECT_ENVIRONMENT="$PWD/.venv"
 export UV_CACHE_DIR="$PWD/.cache/uv"
 export PIP_CACHE_DIR="$PWD/.cache/pip"
 mkdir -p .hf .cache logs runs results
-export HF_HOME="$PWD/.hf"
-mkdir -p "$PWD/.cache/vllm"
-export VLLM_CACHE_ROOT="$PWD/.cache/vllm"
+export VLLM_CACHE_ROOT="$BASE_CACHE_DIR/vllm"
 
 uv sync
 
