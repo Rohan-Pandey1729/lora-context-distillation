@@ -24,6 +24,7 @@ dependencies = [
     "psutil",
     'uvloop==0.19.0; sys_platform == "linux"',
     "vllm==0.8.5",
+    "setuptools",
 ]
 
 [tool.uv]
