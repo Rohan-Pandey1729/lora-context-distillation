@@ -61,6 +61,8 @@ LOGDIR="logs/vllm_${SLURM_JOB_ID}"
 bash bin/start_vllm_server.sh "$MODEL_B" "$PORT" 2 "$LOGDIR" &
 VLLM_PID=$!
 
+echo $PORT $MODEL_B
+
 # Wait for readiness
 $UV run python - <<PY
 from pipeline.util import wait_vllm_ready
