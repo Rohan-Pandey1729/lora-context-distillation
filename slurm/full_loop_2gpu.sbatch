@@ -12,7 +12,8 @@
 #SBATCH --chdir=.
 #SBATCH --export=ALL
 
-export NO_PROXY="127.0.0.1,::1,"$NO_PROXY
+unset ALL_PROXY all_proxy HTTP_PROXY http_proxy HTTPS_PROXY https_proxy
+export NO_PROXY="localhost,127.0.0.1,::1${NO_PROXY:+,$NO_PROXY}"
 export no_proxy="$NO_PROXY"
 
 set -euo pipefail
