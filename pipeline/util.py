@@ -10,18 +10,33 @@ def load_conf():
     cfg["repos_fmt"] = repos
     return cfg
 
-def wait_vllm_ready(port:int, timeout_s:int=600):
-    url = f"http://127.0.0.1:{port}/v1/models"
+import time, requests
+
+def wait_vllm_ready(port: int, timeout_s: int = 900, api_key: str | None = None):
+    base = f"http://127.0.0.1:{port}"
+
+    # Avoid env proxy surprises
+    sess = requests.Session()
+    sess.trust_env = False
+
     t0 = time.time()
-    while time.time()-t0 < timeout_s:
+    last = None
+
+    while time.time() - t0 < timeout_s:
         try:
-            r = requests.get(url, timeout=2)
+            # 1) Check server is up (no /v1 auth)
+            r = sess.get(f"{base}/health", timeout=5)
             if r.status_code == 200:
-                return True
-        except Exception:
-            pass
-        time.sleep(5)
-    raise TimeoutError("vLLM server not ready")
+                r2 = sess.get(f"{base}/v1/models", headers=headers, timeout=10)
+        except Exception as e:
+            last = repr(e)
+
+        time.sleep(2)
+    print(r)
+    print(r2)
+    raise TimeoutError(f"vLLM not ready after {timeout_s}s, last={last}")
+
+    
 
 def json_load(path):
     p = pathlib.Path(path)
