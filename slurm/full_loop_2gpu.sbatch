@@ -12,6 +12,9 @@
 #SBATCH --chdir=.
 #SBATCH --export=ALL
 
+export NO_PROXY="127.0.0.1,::1,"$NO_PROXY
+export no_proxy="$NO_PROXY"
+
 set -euo pipefail
 umask 077
 mkdir -p logs
