@@ -1,0 +1,39 @@
+Skipping import of cpp extensions due to incompatible torch version 2.6.0+cu124 for torchao version 0.14.1             Please see https://github.com/pytorch/ao/issues/2919 for more info
+`torch_dtype` is deprecated! Use `dtype` instead!
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 1130, in <module>
+    uvloop.run(run_server(args))
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/uvloop/__init__.py", line 82, in run
+    return loop.run_until_complete(wrapper())
+  File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/uvloop/__init__.py", line 61, in wrapper
+    return await main
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 1078, in run_server
+    async with build_async_engine_client(args) as engine_client:
+  File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/contextlib.py", line 199, in __aenter__
+    return await anext(self.gen)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 146, in build_async_engine_client
+    async with build_async_engine_client_from_engine_args(
+  File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/contextlib.py", line 199, in __aenter__
+    return await anext(self.gen)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 166, in build_async_engine_client_from_engine_args
+    vllm_config = engine_args.create_engine_config(usage_context=usage_context)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/engine/arg_utils.py", line 1099, in create_engine_config
+    model_config = self.create_model_config()
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/engine/arg_utils.py", line 987, in create_model_config
+    return ModelConfig(
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/config.py", line 517, in __init__
+    self.multimodal_config = self._init_multimodal_config(
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/config.py", line 586, in _init_multimodal_config
+    if self.registry.is_multimodal_model(self.architectures):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/model_executor/models/registry.py", line 505, in is_multimodal_model
+    model_cls, _ = self.inspect_model_cls(architectures)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/model_executor/models/registry.py", line 465, in inspect_model_cls
+    return self._raise_for_unsupported(architectures)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/model_executor/models/registry.py", line 415, in _raise_for_unsupported
+    raise ValueError(
+ValueError: Model architectures ['Qwen3MoeForCausalLM'] failed to be inspected. Please check the logs for more details.

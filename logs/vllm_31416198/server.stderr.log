@@ -1,0 +1,102 @@
+[1;36m(Worker_TP0 pid=64295)[0;0m Exception in thread Thread-1 (_report_usage_worker):
+[1;36m(Worker_TP0 pid=64295)[0;0m OSError: [Errno 122] Disk quota exceeded
+[1;36m(Worker_TP0 pid=64295)[0;0m 
+[1;36m(Worker_TP0 pid=64295)[0;0m During handling of the above exception, another exception occurred:
+[1;36m(Worker_TP0 pid=64295)[0;0m 
+[1;36m(Worker_TP0 pid=64295)[0;0m Traceback (most recent call last):
+[1;36m(Worker_TP0 pid=64295)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+[1;36m(Worker_TP0 pid=64295)[0;0m     self.run()
+[1;36m(Worker_TP0 pid=64295)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/threading.py", line 953, in run
+[1;36m(Worker_TP0 pid=64295)[0;0m     self._target(*self._args, **self._kwargs)
+[1;36m(Worker_TP0 pid=64295)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/usage/usage_lib.py", line 174, in _report_usage_worker
+[1;36m(Worker_TP0 pid=64295)[0;0m     self._report_usage_once(model_architecture, usage_context, extra_kvs)
+[1;36m(Worker_TP0 pid=64295)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/usage/usage_lib.py", line 258, in _report_usage_once
+[1;36m(Worker_TP0 pid=64295)[0;0m     self._write_to_file(data)
+[1;36m(Worker_TP0 pid=64295)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/usage/usage_lib.py", line 289, in _write_to_file
+[1;36m(Worker_TP0 pid=64295)[0;0m     with open(_USAGE_STATS_JSON_PATH, "a") as f:
+[1;36m(Worker_TP0 pid=64295)[0;0m OSError: [Errno 122] Disk quota exceeded
+[1;36m(Worker_TP0 pid=64295)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/16 [00:00<?, ?it/s]
+[1;36m(Worker_TP0 pid=64295)[0;0m Loading safetensors checkpoint shards:   6% Completed | 1/16 [00:06<01:32,  6.13s/it]
+[1;36m(Worker_TP0 pid=64295)[0;0m Loading safetensors checkpoint shards:  12% Completed | 2/16 [00:12<01:25,  6.12s/it]
+[1;36m(Worker_TP0 pid=64295)[0;0m Loading safetensors checkpoint shards:  19% Completed | 3/16 [00:18<01:22,  6.35s/it]
+[1;36m(Worker_TP0 pid=64295)[0;0m Loading safetensors checkpoint shards:  25% Completed | 4/16 [00:25<01:19,  6.64s/it]
+[1;36m(Worker_TP0 pid=64295)[0;0m Loading safetensors checkpoint shards:  31% Completed | 5/16 [00:31<01:10,  6.42s/it]
+[1;36m(Worker_TP0 pid=64295)[0;0m Loading safetensors checkpoint shards:  38% Completed | 6/16 [00:38<01:03,  6.38s/it]
+[1;36m(Worker_TP0 pid=64295)[0;0m Loading safetensors checkpoint shards:  44% Completed | 7/16 [00:44<00:57,  6.42s/it]
+[1;36m(Worker_TP0 pid=64295)[0;0m Loading safetensors checkpoint shards:  50% Completed | 8/16 [00:50<00:50,  6.26s/it]
+[1;36m(Worker_TP0 pid=64295)[0;0m Loading safetensors checkpoint shards:  56% Completed | 9/16 [00:56<00:43,  6.18s/it]
+[1;36m(Worker_TP0 pid=64295)[0;0m Loading safetensors checkpoint shards:  62% Completed | 10/16 [01:02<00:36,  6.16s/it]
+[1;36m(Worker_TP0 pid=64295)[0;0m Loading safetensors checkpoint shards:  69% Completed | 11/16 [01:09<00:30,  6.18s/it]
+[1;36m(Worker_TP0 pid=64295)[0;0m Loading safetensors checkpoint shards:  75% Completed | 12/16 [01:15<00:24,  6.21s/it]
+[1;36m(Worker_TP0 pid=64295)[0;0m Loading safetensors checkpoint shards:  81% Completed | 13/16 [01:21<00:18,  6.24s/it]
+[1;36m(Worker_TP0 pid=64295)[0;0m Loading safetensors checkpoint shards:  88% Completed | 14/16 [01:27<00:12,  6.17s/it]
+[1;36m(Worker_TP0 pid=64295)[0;0m Loading safetensors checkpoint shards:  94% Completed | 15/16 [01:33<00:06,  6.20s/it]
+[1;36m(Worker_TP0 pid=64295)[0;0m Loading safetensors checkpoint shards: 100% Completed | 16/16 [01:35<00:00,  4.95s/it]
+[1;36m(Worker_TP0 pid=64295)[0;0m Loading safetensors checkpoint shards: 100% Completed | 16/16 [01:35<00:00,  6.00s/it]
+[1;36m(Worker_TP0 pid=64295)[0;0m 
+[1;36m(EngineCore_DP0 pid=59425)[0;0m Process EngineCore_DP0:
+[1;36m(EngineCore_DP0 pid=59425)[0;0m Traceback (most recent call last):
+[1;36m(EngineCore_DP0 pid=59425)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+[1;36m(EngineCore_DP0 pid=59425)[0;0m     self.run()
+[1;36m(EngineCore_DP0 pid=59425)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/multiprocessing/process.py", line 108, in run
+[1;36m(EngineCore_DP0 pid=59425)[0;0m     self._target(*self._args, **self._kwargs)
+[1;36m(EngineCore_DP0 pid=59425)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/engine/core.py", line 846, in run_engine_core
+[1;36m(EngineCore_DP0 pid=59425)[0;0m     raise e
+[1;36m(EngineCore_DP0 pid=59425)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/engine/core.py", line 833, in run_engine_core
+[1;36m(EngineCore_DP0 pid=59425)[0;0m     engine_core = EngineCoreProc(*args, **kwargs)
+[1;36m(EngineCore_DP0 pid=59425)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/engine/core.py", line 606, in __init__
+[1;36m(EngineCore_DP0 pid=59425)[0;0m     super().__init__(
+[1;36m(EngineCore_DP0 pid=59425)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/engine/core.py", line 109, in __init__
+[1;36m(EngineCore_DP0 pid=59425)[0;0m     num_gpu_blocks, num_cpu_blocks, kv_cache_config = self._initialize_kv_caches(
+[1;36m(EngineCore_DP0 pid=59425)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/engine/core.py", line 231, in _initialize_kv_caches
+[1;36m(EngineCore_DP0 pid=59425)[0;0m     available_gpu_memory = self.model_executor.determine_available_memory()
+[1;36m(EngineCore_DP0 pid=59425)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/executor/abstract.py", line 126, in determine_available_memory
+[1;36m(EngineCore_DP0 pid=59425)[0;0m     return self.collective_rpc("determine_available_memory")
+[1;36m(EngineCore_DP0 pid=59425)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/executor/multiproc_executor.py", line 358, in collective_rpc
+[1;36m(EngineCore_DP0 pid=59425)[0;0m     return aggregate(get_response())
+[1;36m(EngineCore_DP0 pid=59425)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/executor/multiproc_executor.py", line 341, in get_response
+[1;36m(EngineCore_DP0 pid=59425)[0;0m     raise RuntimeError(
+[1;36m(EngineCore_DP0 pid=59425)[0;0m RuntimeError: Worker failed with error ''_OpNamespace' '_moe_C' object has no attribute 'topk_softmax'', please check the stack trace above for the root cause
+[1;36m(APIServer pid=14595)[0;0m Traceback (most recent call last):
+[1;36m(APIServer pid=14595)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[1;36m(APIServer pid=14595)[0;0m     return _run_code(code, main_globals, None,
+[1;36m(APIServer pid=14595)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/runpy.py", line 86, in _run_code
+[1;36m(APIServer pid=14595)[0;0m     exec(code, run_globals)
+[1;36m(APIServer pid=14595)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 2096, in <module>
+[1;36m(APIServer pid=14595)[0;0m     uvloop.run(run_server(args))
+[1;36m(APIServer pid=14595)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/uvloop/__init__.py", line 82, in run
+[1;36m(APIServer pid=14595)[0;0m     return loop.run_until_complete(wrapper())
+[1;36m(APIServer pid=14595)[0;0m   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+[1;36m(APIServer pid=14595)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/uvloop/__init__.py", line 61, in wrapper
+[1;36m(APIServer pid=14595)[0;0m     return await main
+[1;36m(APIServer pid=14595)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 2024, in run_server
+[1;36m(APIServer pid=14595)[0;0m     await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+[1;36m(APIServer pid=14595)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 2043, in run_server_worker
+[1;36m(APIServer pid=14595)[0;0m     async with build_async_engine_client(
+[1;36m(APIServer pid=14595)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/contextlib.py", line 199, in __aenter__
+[1;36m(APIServer pid=14595)[0;0m     return await anext(self.gen)
+[1;36m(APIServer pid=14595)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 195, in build_async_engine_client
+[1;36m(APIServer pid=14595)[0;0m     async with build_async_engine_client_from_engine_args(
+[1;36m(APIServer pid=14595)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/contextlib.py", line 199, in __aenter__
+[1;36m(APIServer pid=14595)[0;0m     return await anext(self.gen)
+[1;36m(APIServer pid=14595)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 236, in build_async_engine_client_from_engine_args
+[1;36m(APIServer pid=14595)[0;0m     async_llm = AsyncLLM.from_vllm_config(
+[1;36m(APIServer pid=14595)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/utils/func_utils.py", line 116, in inner
+[1;36m(APIServer pid=14595)[0;0m     return fn(*args, **kwargs)
+[1;36m(APIServer pid=14595)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/engine/async_llm.py", line 203, in from_vllm_config
+[1;36m(APIServer pid=14595)[0;0m     return cls(
+[1;36m(APIServer pid=14595)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/engine/async_llm.py", line 133, in __init__
+[1;36m(APIServer pid=14595)[0;0m     self.engine_core = EngineCoreClient.make_async_mp_client(
+[1;36m(APIServer pid=14595)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/engine/core_client.py", line 121, in make_async_mp_client
+[1;36m(APIServer pid=14595)[0;0m     return AsyncMPClient(*client_args)
+[1;36m(APIServer pid=14595)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/engine/core_client.py", line 808, in __init__
+[1;36m(APIServer pid=14595)[0;0m     super().__init__(
+[1;36m(APIServer pid=14595)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/engine/core_client.py", line 469, in __init__
+[1;36m(APIServer pid=14595)[0;0m     with launch_core_engines(vllm_config, executor_class, log_stats) as (
+[1;36m(APIServer pid=14595)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/contextlib.py", line 142, in __exit__
+[1;36m(APIServer pid=14595)[0;0m     next(self.gen)
+[1;36m(APIServer pid=14595)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/engine/utils.py", line 907, in launch_core_engines
+[1;36m(APIServer pid=14595)[0;0m     wait_for_engine_startup(
+[1;36m(APIServer pid=14595)[0;0m   File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/v1/engine/utils.py", line 964, in wait_for_engine_startup
+[1;36m(APIServer pid=14595)[0;0m     raise RuntimeError(
+[1;36m(APIServer pid=14595)[0;0m RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {}
