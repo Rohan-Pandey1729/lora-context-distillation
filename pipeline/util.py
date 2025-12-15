@@ -28,6 +28,8 @@ def wait_vllm_ready(port: int, timeout_s: int = 900, api_key: str | None = None)
             r = sess.get(f"{base}/health", timeout=5)
             if "200" in str(r):
                 r2 = sess.get(f"{base}/v1/models", timeout=10)
+                if "200" in str(r2):
+                    return "good"
         except Exception as e:
             last = repr(e)
 
