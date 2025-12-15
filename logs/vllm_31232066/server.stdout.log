@@ -1,9 +1,0 @@
-INFO 11-23 19:30:50 [scheduler.py:216] Chunked prefill is enabled with max_num_batched_tokens=2048.
-WARNING 11-23 19:30:50 [argparse_utils.py:79] argument '--disable-log-requests' is deprecated and replaced with '--enable-log-requests'. This will be removed in v0.12.0.
-[1;36m(APIServer pid=15064)[0;0m INFO 11-23 19:30:50 [api_server.py:1977] vLLM API server version 0.11.1
-[1;36m(APIServer pid=15064)[0;0m INFO 11-23 19:30:50 [utils.py:253] non-default args: {'host': '0.0.0.0', 'model': 'Qwen/Qwen3-30B-A3B-Thinking-2507', 'max_model_len': 32768, 'quantization': 'fp8', 'enforce_eager': True, 'tensor_parallel_size': 2, 'gpu_memory_utilization': 0.92, 'max_num_seqs': 64}
-[1;36m(APIServer pid=15064)[0;0m INFO 11-23 19:30:50 [model.py:631] Resolved architecture: Qwen3MoeForCausalLM
-[1;36m(APIServer pid=15064)[0;0m WARNING 11-23 19:30:50 [model.py:1921] Your device 'Quadro RTX 6000' (with compute capability 7.5) doesn't support torch.bfloat16. Falling back to torch.float16 for compatibility.
-[1;36m(APIServer pid=15064)[0;0m WARNING 11-23 19:30:50 [model.py:1971] Casting torch.bfloat16 to torch.float16.
-[1;36m(APIServer pid=15064)[0;0m INFO 11-23 19:30:50 [model.py:1745] Using max model len 32768
-[1;36m(APIServer pid=15064)[0;0m INFO 11-23 19:31:00 [scheduler.py:216] Chunked prefill is enabled with max_num_batched_tokens=2048.
