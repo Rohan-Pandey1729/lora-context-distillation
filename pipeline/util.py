@@ -26,8 +26,8 @@ def wait_vllm_ready(port: int, timeout_s: int = 900, api_key: str | None = None)
         try:
             # 1) Check server is up (no /v1 auth)
             r = sess.get(f"{base}/health", timeout=5)
-            if r.status_code == 200:
-                r2 = sess.get(f"{base}/v1/models", headers=headers, timeout=10)
+            if "200" in str(r):
+                r2 = sess.get(f"{base}/v1/models", timeout=10)
         except Exception as e:
             last = repr(e)
 
