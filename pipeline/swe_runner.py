@@ -2,6 +2,7 @@
 
 import json
 import tarfile
+import threading
 from pathlib import Path
 
 from pipeline.hf_sync import ensure_repo, upload_path
@@ -11,6 +12,45 @@ from minisweagent.run.extra import swebench as swe_run
 
 
 MINI_DATASET = "MariusHobbhahn/SWE-bench-verified-mini"
+SYNC_INTERVAL_S = 60
+
+
+def _collect_sync_paths(out_dir: Path) -> list[Path]:
+    paths = [
+        out_dir / "preds.json",
+        out_dir / "all-preds.jsonl",
+        out_dir / "progress.json",
+    ]
+    paths.extend(out_dir.glob("exit_statuses_*.yaml"))
+    paths.extend(out_dir.rglob("*.traj.json"))
+    return paths
+
+
+def _sync_once(repo_id: str, out_dir: Path, seen: dict[str, int]) -> None:
+    for path in _collect_sync_paths(out_dir):
+        if not path.exists() or path.is_dir():
+            continue
+        try:
+            mtime = path.stat().st_mtime_ns
+        except FileNotFoundError:
+            continue
+        key = str(path)
+        if seen.get(key) == mtime:
+            continue
+        try:
+            upload_path(repo_id, str(path), "dataset")
+            seen[key] = mtime
+        except Exception as e:
+            print(f"[warn] sync failed for {path}: {e}")
+
+
+def _sync_loop(repo_id: str, out_dir: Path, stop: threading.Event, seen: dict[str, int]) -> None:
+    while not stop.is_set():
+        try:
+            _sync_once(repo_id, out_dir, seen)
+        except Exception as e:
+            print(f"[warn] sync loop error: {e}")
+        stop.wait(SYNC_INTERVAL_S)
 
 
 def _rewrite_jsonl(preds_json: Path, jsonl_path: Path):
@@ -48,21 +88,31 @@ def run():
     ds_repo = cfg["repos_fmt"]["sweb_dataset"]
     ensure_repo(ds_repo, "dataset")
 
-    # Stock mini-swe-agent runner handles agent errors, trajectories, logging.
-    swe_run.main(
-        subset=subset,
-        split=split,
-        slice_spec="",
-        filter_spec="",
-        shuffle=False,
-        output=str(out_dir),
-        workers=1,
-        model=None,
-        model_class=None,
-        redo_existing=False,
-        config_spec=Path("conf/mini_qwen_thinking.yaml"),
-        environment_class="singularity",
-    )
+    stop = threading.Event()
+    seen: dict[str, int] = {}
+    t = threading.Thread(target=_sync_loop, args=(ds_repo, out_dir, stop, seen), daemon=True)
+    t.start()
+
+    try:
+        # Stock mini-swe-agent runner handles agent errors, trajectories, logging.
+        swe_run.main(
+            subset=subset,
+            split=split,
+            slice_spec="",
+            filter_spec="",
+            shuffle=False,
+            output=str(out_dir),
+            workers=1,
+            model=None,
+            model_class=None,
+            redo_existing=False,
+            config_spec=Path("conf/mini_qwen_thinking.yaml"),
+            environment_class="singularity",
+        )
+    finally:
+        stop.set()
+        t.join(timeout=SYNC_INTERVAL_S)
+        _sync_once(ds_repo, out_dir, seen)
 
     preds_path = out_dir / "preds.json"
     jsonl_path = out_dir / "all-preds.jsonl"
