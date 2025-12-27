@@ -1,27 +1,0 @@
-Skipping import of cpp extensions due to incompatible torch version 2.6.0+cu124 for torchao version 0.14.1             Please see https://github.com/pytorch/ao/issues/2919 for more info
-`torch_dtype` is deprecated! Use `dtype` instead!
-Skipping import of cpp extensions due to incompatible torch version 2.6.0+cu124 for torchao version 0.14.1             Please see https://github.com/pytorch/ao/issues/2919 for more info
-Skipping import of cpp extensions due to incompatible torch version 2.6.0+cu124 for torchao version 0.14.1             Please see https://github.com/pytorch/ao/issues/2919 for more info
-Skipping import of cpp extensions due to incompatible torch version 2.6.0+cu124 for torchao version 0.14.1             Please see https://github.com/pytorch/ao/issues/2919 for more info
-[1;36m(VllmWorker rank=0 pid=31256)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/16 [00:00<?, ?it/s]
-[1;36m(VllmWorker rank=0 pid=31256)[0;0m Loading safetensors checkpoint shards:   6% Completed | 1/16 [00:04<01:13,  4.90s/it]
-[1;36m(VllmWorker rank=0 pid=31256)[0;0m Loading safetensors checkpoint shards:  12% Completed | 2/16 [00:09<01:05,  4.64s/it]
-[1;36m(VllmWorker rank=0 pid=31256)[0;0m Loading safetensors checkpoint shards:  19% Completed | 3/16 [00:13<00:59,  4.58s/it]
-[1;36m(VllmWorker rank=0 pid=31256)[0;0m Loading safetensors checkpoint shards:  25% Completed | 4/16 [00:18<00:54,  4.57s/it]
-[1;36m(VllmWorker rank=0 pid=31256)[0;0m Loading safetensors checkpoint shards:  31% Completed | 5/16 [00:22<00:50,  4.57s/it]
-[1;36m(VllmWorker rank=0 pid=31256)[0;0m Loading safetensors checkpoint shards:  38% Completed | 6/16 [00:27<00:44,  4.43s/it]
-[1;36m(VllmWorker rank=0 pid=31256)[0;0m Loading safetensors checkpoint shards:  44% Completed | 7/16 [00:31<00:39,  4.42s/it]
-[1;36m(VllmWorker rank=0 pid=31256)[0;0m Loading safetensors checkpoint shards:  50% Completed | 8/16 [00:36<00:36,  4.51s/it]
-[1;36m(VllmWorker rank=0 pid=31256)[0;0m Loading safetensors checkpoint shards:  56% Completed | 9/16 [00:40<00:31,  4.48s/it]
-[1;36m(VllmWorker rank=0 pid=31256)[0;0m Loading safetensors checkpoint shards:  62% Completed | 10/16 [00:44<00:26,  4.41s/it]
-[1;36m(VllmWorker rank=0 pid=31256)[0;0m Loading safetensors checkpoint shards:  69% Completed | 11/16 [00:49<00:22,  4.47s/it]
-[1;36m(VllmWorker rank=0 pid=31256)[0;0m Loading safetensors checkpoint shards:  75% Completed | 12/16 [00:55<00:19,  4.81s/it]
-[1;36m(VllmWorker rank=0 pid=31256)[0;0m Loading safetensors checkpoint shards:  81% Completed | 13/16 [00:59<00:13,  4.66s/it]
-[1;36m(VllmWorker rank=0 pid=31256)[0;0m Loading safetensors checkpoint shards:  88% Completed | 14/16 [01:11<00:13,  6.90s/it]
-[1;36m(VllmWorker rank=0 pid=31256)[0;0m Loading safetensors checkpoint shards:  94% Completed | 15/16 [01:16<00:06,  6.30s/it]
-[1;36m(VllmWorker rank=0 pid=31256)[0;0m Loading safetensors checkpoint shards: 100% Completed | 16/16 [01:19<00:00,  5.36s/it]
-[1;36m(VllmWorker rank=0 pid=31256)[0;0m Loading safetensors checkpoint shards: 100% Completed | 16/16 [01:19<00:00,  4.98s/it]
-[1;36m(VllmWorker rank=0 pid=31256)[0;0m 
-INFO:     Started server process [29110]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.

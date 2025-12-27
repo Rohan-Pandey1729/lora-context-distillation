@@ -16,14 +16,7 @@ SYNC_INTERVAL_S = 60
 
 
 def _collect_sync_paths(out_dir: Path) -> list[Path]:
-    paths = [
-        out_dir / "preds.json",
-        out_dir / "all-preds.jsonl",
-        out_dir / "progress.json",
-    ]
-    paths.extend(out_dir.glob("exit_statuses_*.yaml"))
-    paths.extend(out_dir.rglob("*.traj.json"))
-    return paths
+    return [p for p in out_dir.rglob("*") if p.is_file()]
 
 
 def _sync_once(repo_id: str, out_dir: Path, seen: dict[str, int]) -> None:
