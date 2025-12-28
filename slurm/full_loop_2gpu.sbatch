@@ -6,7 +6,7 @@
 #SBATCH --gpus=l40s:2
 #SBATCH --cpus-per-task=24
 #SBATCH --mem=128G
-#SBATCH --time=2:30:00
+#SBATCH --time=12:00:00
 #SBATCH --output=logs/%x-%j.out
 #SBATCH --error=logs/%x-%j.err
 #SBATCH --chdir=.
