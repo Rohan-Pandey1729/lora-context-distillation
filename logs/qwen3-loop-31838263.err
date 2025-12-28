@@ -1,0 +1,4 @@
+downloading uv 0.9.17 x86_64-unknown-linux-gnu
+Resolved 208 packages in 4ms
+Audited 201 packages in 82ms
+[2025-12-14T19:40:55.958] error: *** JOB 31838263 ON g3111 CANCELLED AT 2025-12-14T19:40:55 DUE to SIGNAL Terminated ***
