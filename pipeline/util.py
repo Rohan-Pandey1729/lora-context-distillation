@@ -47,8 +47,10 @@ def json_load(path):
 
 def json_dump(obj, path):
     import json, tempfile
-    p=os.path.dirname(path); 
-    if p: os.makedirs(p, exist_ok=True)
-    tmp = path + ".tmp"
-    with open(tmp,"w") as f: json.dump(obj,f,indent=2)
-    os.replace(tmp, path)
+    p = pathlib.Path(path)
+    if p.parent:
+        p.parent.mkdir(parents=True, exist_ok=True)
+    tmp = p.with_name(p.name + ".tmp")
+    with open(tmp, "w") as f:
+        json.dump(obj, f, indent=2)
+    os.replace(tmp, p)
