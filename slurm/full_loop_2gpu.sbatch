@@ -82,6 +82,10 @@ $UV run python -m pipeline.strip_thinking \
   --preds_json "runs/${RUN_ID}/swe/preds.json" \
   --out_jsonl  "runs/${RUN_ID}/sft/sft_qwenA_from_B_mini.jsonl"
 
+# Stop vLLM
+kill -9 "$VLLM_PID" 2>/dev/null || true
+$UV run python bin/kill_port.py "$PORT" || true
+
 # Train A with Unsloth and push checkpoints and merged snapshots
 $UV run python -m pipeline.train_unsloth_lora
 
@@ -99,10 +103,6 @@ ensure_repo(repo, "model")
 upload_path(repo, f"runs/{run_id}/B_new", "model")
 print("Uploaded new B")
 PY
-
-# Stop vLLM
-kill -9 "$VLLM_PID" 2>/dev/null || true
-$UV run python bin/kill_port.py "$PORT" || true
 
 # Snapshot logs
 $UV run python -m pipeline.snap_and_sync logs || true
