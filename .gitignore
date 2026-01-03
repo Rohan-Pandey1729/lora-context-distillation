@@ -12,3 +12,4 @@
 /pipeline/__pycache__/
 uv.lock
 /.cache/
+/unsloth_compiled_cache/
