@@ -70,7 +70,7 @@ echo $PORT $MODEL_B
 # Wait for readiness
 $UV run python - <<PY
 from pipeline.util import wait_vllm_ready
-wait_vllm_ready(port=int("$PORT"), timeout_s=900)
+wait_vllm_ready(port=int("$PORT"), timeout_s=2400)
 print("vLLM ready")
 PY
 
