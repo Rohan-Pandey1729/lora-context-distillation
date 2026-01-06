@@ -51,7 +51,7 @@ environment:
   environment_class: singularity
 model:
   model_name: "hosted_vllm/Qwen/Qwen3-30B-A3B-Thinking-2507"
-  litellm_model_registry: "conf/litellm_model_registry.json"
+  litellm_model_registry: "config/litellm_model_registry.json"
   model_kwargs:
     custom_llm_provider: "hosted_vllm"
     api_base: "http://127.0.0.1:8000/v1"
