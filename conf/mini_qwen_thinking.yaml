@@ -51,6 +51,7 @@ environment:
   environment_class: singularity
 model:
   model_name: "hosted_vllm/Qwen/Qwen3-30B-A3B-Thinking-2507"
+  cost_tracking: "ignore_errors"
   model_kwargs:
     custom_llm_provider: "hosted_vllm"
     api_base: "http://127.0.0.1:8000/v1"
