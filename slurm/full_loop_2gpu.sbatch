@@ -28,6 +28,7 @@ if [[ -z "${HF_TOKEN:-}" ]]; then
 fi
 export HF_TOKEN
 export HUGGING_FACE_HUB_TOKEN="$HF_TOKEN"
+export MSWEA_COST_TRACKING="ignore_errors"
 
 # RUN_ID defaults to slurm job id
 export RUN_ID="${RUN_ID:-qwen3-${SLURM_JOB_ID:-manual}}"
