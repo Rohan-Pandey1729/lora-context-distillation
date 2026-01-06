@@ -1,0 +1,18 @@
+Skipping import of cpp extensions due to incompatible torch version 2.6.0+cu124 for torchao version 0.14.1             Please see https://github.com/pytorch/ao/issues/2919 for more info
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 1130, in <module>
+    uvloop.run(run_server(args))
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/uvloop/__init__.py", line 82, in run
+    return loop.run_until_complete(wrapper())
+  File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/uvloop/__init__.py", line 61, in wrapper
+    return await main
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 1066, in run_server
+    sock = create_server_socket(sock_addr)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 1037, in create_server_socket
+    sock.bind(addr)
+OSError: [Errno 98] Address already in use

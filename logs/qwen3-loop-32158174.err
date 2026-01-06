@@ -1,0 +1,77 @@
+downloading uv 0.9.21 x86_64-unknown-linux-gnu
+Resolved 208 packages in 7ms
+Audited 201 packages in 86ms
+Processing Files (0 / 0)      : |          |  0.00B /  0.00B            
+New Data Upload               : |          |  0.00B /  0.00B            [A
+
+  ...3-32158174/swe/traces.tgz: 100%|██████████| 2.11kB / 2.11kB            [A[A
+
+  ...3-32158174/swe/traces.tgz: 100%|██████████| 2.11kB / 2.11kB            [A[AProcessing Files (1 / 1)      : 100%|██████████| 2.11kB / 2.11kB, 5.26kB/s  
+New Data Upload               : 100%|██████████| 2.11kB / 2.11kB, 5.26kB/s  [A
+
+  ...3-32158174/swe/traces.tgz: 100%|██████████| 2.11kB / 2.11kB            [A[A
+
+  ...3-32158174/swe/traces.tgz: 100%|██████████| 2.11kB / 2.11kB            [A[A
+
+  ...3-32158174/swe/traces.tgz: 100%|██████████| 2.11kB / 2.11kB            [A[A
+
+  ...3-32158174/swe/traces.tgz: 100%|██████████| 2.11kB / 2.11kB            [A[A
+
+  ...3-32158174/swe/traces.tgz: 100%|██████████| 2.11kB / 2.11kB            [A[A
+
+  ...3-32158174/swe/traces.tgz: 100%|██████████| 2.11kB / 2.11kB            [A[A
+
+  ...3-32158174/swe/traces.tgz: 100%|██████████| 2.11kB / 2.11kB            [A[A
+
+  ...3-32158174/swe/traces.tgz: 100%|██████████| 2.11kB / 2.11kB            [A[A
+
+  ...3-32158174/swe/traces.tgz: 100%|██████████| 2.11kB / 2.11kB            [A[A
+
+  ...3-32158174/swe/traces.tgz: 100%|██████████| 2.11kB / 2.11kB            [A[A
+
+  ...3-32158174/swe/traces.tgz: 100%|██████████| 2.11kB / 2.11kB            [A[A
+
+  ...3-32158174/swe/traces.tgz: 100%|██████████| 2.11kB / 2.11kB            [A[A
+
+  ...3-32158174/swe/traces.tgz: 100%|██████████| 2.11kB / 2.11kB            [A[AProcessing Files (1 / 1)      : 100%|██████████| 2.11kB / 2.11kB,   629B/s  
+New Data Upload               : 100%|██████████| 2.11kB / 2.11kB,   629B/s  
+  ...3-32158174/swe/traces.tgz: 100%|██████████| 2.11kB / 2.11kB            
+/var/spool/slurmd/job32158174/slurm_script: line 88: 61521 Killed                  bash bin/start_vllm_server.sh "$MODEL_B" "$PORT" 2 "$LOGDIR"
+/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/pydantic/main.py:1804: UserWarning: Field name "arguments" in "MultislerpMergeTask" shadows an attribute in parent "Task[Tensor]"
+  return meta(
+/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/pydantic/main.py:1804: UserWarning: Field name "group_label" in "MultislerpMergeTask" shadows an attribute in parent "Task[Tensor]"
+  return meta(
+/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/pydantic/main.py:1804: UserWarning: Field name "uses_accelerator" in "MultislerpMergeTask" shadows an attribute in parent "Task[Tensor]"
+  return meta(
+/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/pydantic/main.py:1804: UserWarning: Field name "execute" in "MultislerpMergeTask" shadows an attribute in parent "Task[Tensor]"
+  return meta(
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 0 examples [00:01, ? examples/s]Generating train split: 0 examples [00:01, ? examples/s]
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/datasets/builder.py", line 1850, in _prepare_split_single
+    num_examples, num_bytes = writer.finalize()
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/datasets/arrow_writer.py", line 740, in finalize
+    raise SchemaInferenceError("Please pass `features` or at least one example when writing data")
+datasets.arrow_writer.SchemaInferenceError: Please pass `features` or at least one example when writing data
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/pipeline/train_unsloth_lora.py", line 131, in <module>
+    train()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/pipeline/train_unsloth_lora.py", line 53, in train
+    ds = load_dataset("json", data_files=data_jsonl, split="train")
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/datasets/load.py", line 1417, in load_dataset
+    builder_instance.download_and_prepare(
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/datasets/builder.py", line 897, in download_and_prepare
+    self._download_and_prepare(
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/datasets/builder.py", line 973, in _download_and_prepare
+    self._prepare_split(split_generator, **prepare_split_kwargs)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/datasets/builder.py", line 1705, in _prepare_split
+    for job_id, done, content in self._prepare_split_single(
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/datasets/builder.py", line 1861, in _prepare_split_single
+    raise DatasetGenerationError("An error occurred while generating the dataset") from e
+datasets.exceptions.DatasetGenerationError: An error occurred while generating the dataset

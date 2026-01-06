@@ -1,0 +1,1729 @@
+no checksums to verify
+installing to /gscratch/stf/rpande/lora-context-distillation/bin
+  uv
+  uvx
+everything's installed!
+uv 0.9.21
+CUDA OK - devices: 2
+8000 Qwen/Qwen3-30B-A3B-Thinking-2507
+vLLM ready
+vllm not initialized yet, starting
+👋 This is mini-swe-agent version 1.14.4.
+Loading global config from '/mmfs1/home/rpande/.config/mini-swe-agent/.env'
+minisweagent: INFO: Results will be saved to runs/qwen3-32158174/swe            
+Logging to 'runs/qwen3-32158174/swe/minisweagent.log'
+minisweagent: INFO: Loading dataset MariusHobbhahn/SWE-bench-verified-mini,     
+split test...                                                                   
+minisweagent: INFO: Running on 50 instances...                                  
+minisweagent: INFO: Loading agent config from 'conf/mini_qwen_thinking.yaml'    
+minisweagent: ERROR: Error in future for instance django__django-11790:         
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance django__django-11815:         
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance django__django-11848:         
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance django__django-11880:         
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance django__django-11885:         
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance django__django-11951:         
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance django__django-11964:         
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance django__django-11999:         
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance django__django-12039:         
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance django__django-12050:         
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance django__django-12143:         
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance django__django-12155:         
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance django__django-12193:         
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance django__django-12209:         
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance django__django-12262:         
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance django__django-12273:         
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance django__django-12276:         
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance django__django-12304:         
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance django__django-12308:         
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance django__django-12325:         
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance django__django-12406:         
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance django__django-12708:         
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance django__django-12713:         
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance django__django-12774:         
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance django__django-9296:          
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance sphinx-doc__sphinx-10323:     
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance sphinx-doc__sphinx-10435:     
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance sphinx-doc__sphinx-10466:     
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance sphinx-doc__sphinx-10673:     
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance sphinx-doc__sphinx-11510:     
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance sphinx-doc__sphinx-7590:      
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance sphinx-doc__sphinx-7748:      
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance sphinx-doc__sphinx-7757:      
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance sphinx-doc__sphinx-7985:      
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance sphinx-doc__sphinx-8035:      
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance sphinx-doc__sphinx-8056:      
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance sphinx-doc__sphinx-8265:      
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance sphinx-doc__sphinx-8269:      
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance sphinx-doc__sphinx-8475:      
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance sphinx-doc__sphinx-8548:      
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance sphinx-doc__sphinx-8551:      
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance sphinx-doc__sphinx-8638:      
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance sphinx-doc__sphinx-8721:      
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance sphinx-doc__sphinx-9229:      
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance sphinx-doc__sphinx-9230:      
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance sphinx-doc__sphinx-9281:      
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance sphinx-doc__sphinx-9320:      
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance sphinx-doc__sphinx-9367:      
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance sphinx-doc__sphinx-9461:      
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+minisweagent: ERROR: Error in future for instance sphinx-doc__sphinx-9698:      
+LitellmModelConfig.__init__() got an unexpected keyword argument 'cost_tracking'
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 239, in process_futures            
+    future.result()                                                             
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result  
+    return self.__get_result()                                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in         
+__get_result                                                                    
+    raise self._exception                                                       
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-lin
+ux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run     
+    result = self.fn(*self.args, **self.kwargs)                                 
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 134, in process_instance           
+    model = get_model(config=config.get("model", {}))                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/__init__.py", line 65, in get_model                      
+    return model_class(**config)                                                
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/models/litellm_model.py", line 34, in __init__                  
+    self.config = config_class(**kwargs)                                        
+TypeError: LitellmModelConfig.__init__() got an unexpected keyword argument     
+'cost_tracking'                                                                 
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Exit Status        ┃ Count ┃ Most recent instances                           ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Uncaught TypeError │    50 │ sphinx-doc__sphinx-9698,                        │
+│                    │       │ sphinx-doc__sphinx-9461, sp...                  │
+└────────────────────┴───────┴─────────────────────────────────────────────────┘
+  Overall Progress ($0.00) ━━━━━━━━━━━━━━━━━━━━━ 50/50 100% 0:00:18 eta: 0:00:00Wrote SFT JSONL to runs/qwen3-32158174/sft/sft_qwenA_from_B_mini.jsonl
+🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
+INFO 01-05 21:37:47 [importing.py:53] Triton module has been replaced with a placeholder.
+INFO 01-05 21:37:47 [__init__.py:239] Automatically detected platform cuda.
+🦥 Unsloth Zoo will now patch everything to make training faster!
