@@ -45,6 +45,9 @@ def train():
     out_dir = f"runs/{run_id}/trainA"
     os.makedirs(out_dir, exist_ok=True)
 
+    if not os.path.isfile(data_jsonl) or os.path.getsize(data_jsonl) == 0:
+        raise RuntimeError(f"SFT dataset missing or empty at {data_jsonl}")
+
     # Resume from latest remote checkpoint if local dir is fresh
     latest = list_latest_checkpoint(repos["a_ckpt_model"])
     if latest and not any(p.name.startswith("checkpoint-") for p in pathlib.Path(out_dir).glob("checkpoint-*")):

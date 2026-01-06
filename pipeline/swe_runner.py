@@ -1,9 +1,12 @@
 """SWE-bench mini runner: delegate to stock mini-swe-agent swebench script, enforce mini subset + HF sync."""
 
 import json
+import os
 import tarfile
 import threading
 from pathlib import Path
+
+import yaml
 
 from pipeline.hf_sync import ensure_repo, upload_path
 from pipeline.util import json_load, json_dump, load_conf
@@ -64,11 +67,61 @@ def _rewrite_jsonl(preds_json: Path, jsonl_path: Path):
             )
 
 
+def _write_agent_config(run_id: str, port: int, registry_path: Path) -> Path:
+    base_cfg_path = Path("conf/mini_qwen_thinking.yaml")
+    cfg = yaml.safe_load(base_cfg_path.read_text())
+    if not isinstance(cfg, dict):
+        raise RuntimeError(f"Invalid agent config in {base_cfg_path}")
+    model_cfg = cfg.get("model", {})
+    if not isinstance(model_cfg, dict):
+        model_cfg = {}
+    model_kwargs = model_cfg.get("model_kwargs", {})
+    if not isinstance(model_kwargs, dict):
+        model_kwargs = {}
+    model_kwargs["api_base"] = f"http://127.0.0.1:{port}/v1"
+    model_cfg["model_kwargs"] = model_kwargs
+    if registry_path.exists():
+        model_cfg["litellm_model_registry"] = str(registry_path)
+    cfg["model"] = model_cfg
+
+    out_path = Path(f"runs/{run_id}/swe/agent_config.yaml")
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(yaml.safe_dump(cfg, sort_keys=False))
+    return out_path
+
+
+def _latest_exit_status(out_dir: Path) -> Path | None:
+    candidates = sorted(out_dir.glob("exit_statuses_*.yaml"), key=lambda p: p.stat().st_mtime_ns)
+    return candidates[-1] if candidates else None
+
+
+def _raise_on_exit_errors(out_dir: Path) -> None:
+    exit_path = _latest_exit_status(out_dir)
+    if not exit_path:
+        return
+    data = yaml.safe_load(exit_path.read_text()) or {}
+    instances = data.get("instances_by_exit_status", {}) or {}
+    if not isinstance(instances, dict):
+        return
+    bad = {
+        status: insts
+        for status, insts in instances.items()
+        if isinstance(status, str)
+        and any(word in status.lower() for word in ("error", "exception", "uncaught"))
+    }
+    if bad:
+        total = sum(len(v) for v in bad.values() if isinstance(v, list))
+        detail = ", ".join(f"{k}: {len(v)}" for k, v in bad.items())
+        raise RuntimeError(f"SWE run had errors ({total} instances): {detail}")
+
+
 def run():
     cfg = load_conf()
     run_id = cfg["run_id"]
     subset = cfg["swe"]["dataset_repo"]
     split = cfg["swe"]["split"]
+    port = int(os.environ.get("VLLM_PORT", cfg["ports"]["vllm"]))
+    registry_path = Path("conf/litellm_model_registry.json").resolve()
 
     # Enforce mini subset only
     if "mini" not in subset.lower():
@@ -88,6 +141,7 @@ def run():
 
     try:
         # Stock mini-swe-agent runner handles agent errors, trajectories, logging.
+        agent_cfg = _write_agent_config(run_id, port, registry_path)
         swe_run.main(
             subset=subset,
             split=split,
@@ -99,7 +153,7 @@ def run():
             model=None,
             model_class=None,
             redo_existing=False,
-            config_spec=Path("conf/mini_qwen_thinking.yaml"),
+            config_spec=agent_cfg,
             environment_class="singularity",
         )
     finally:
@@ -109,6 +163,11 @@ def run():
 
     preds_path = out_dir / "preds.json"
     jsonl_path = out_dir / "all-preds.jsonl"
+    _raise_on_exit_errors(out_dir)
+    if not preds_path.exists():
+        raise RuntimeError(f"Missing preds.json at {preds_path}")
+    if not json_load(preds_path):
+        raise RuntimeError(f"Empty preds.json at {preds_path}")
     if preds_path.exists():
         _rewrite_jsonl(preds_path, jsonl_path)
         # simple progress marker

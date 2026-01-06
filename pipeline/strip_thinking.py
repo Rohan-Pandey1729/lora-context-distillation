@@ -46,6 +46,8 @@ def main():
     split = args.split or cfg["swe"]["split"]
 
     preds = json_load(args.preds_json)
+    if not preds:
+        raise RuntimeError(f"No predictions found in {args.preds_json}")
     prompts = build_prompt_lookup(dataset_repo, split)
 
     os.makedirs(os.path.dirname(args.out_jsonl), exist_ok=True)

@@ -28,7 +28,7 @@ if [[ -z "${HF_TOKEN:-}" ]]; then
 fi
 export HF_TOKEN
 export HUGGING_FACE_HUB_TOKEN="$HF_TOKEN"
-export MSWEA_COST_TRACKING="ignore_errors"
+export LITELLM_MODEL_REGISTRY_PATH="$PWD/conf/litellm_model_registry.json"
 
 # RUN_ID defaults to slurm job id
 export RUN_ID="${RUN_ID:-qwen3-${SLURM_JOB_ID:-manual}}"
@@ -48,9 +48,31 @@ UV="uv"
 # Read config for model and port using uv run
 PORT="$($UV run python - <<'PY'
 from pipeline.util import load_conf
-print(load_conf()["ports"]["vllm"])
+import socket
+
+cfg = load_conf()
+port = int(cfg["ports"]["vllm"])
+
+def can_bind(p: int) -> bool:
+    sock = socket.socket()
+    try:
+        sock.bind(("0.0.0.0", p))
+        return True
+    except OSError:
+        return False
+    finally:
+        sock.close()
+
+if not can_bind(port):
+    sock = socket.socket()
+    sock.bind(("0.0.0.0", 0))
+    port = sock.getsockname()[1]
+    sock.close()
+
+print(port)
 PY
 )"
+export VLLM_PORT="$PORT"
 
 MODEL_B="$($UV run python - <<'PY'
 from pipeline.util import load_conf

@@ -1,0 +1,9 @@
+{
+  "Qwen/Qwen3-30B-A3B-Thinking-2507": {
+    "max_tokens": 32768,
+    "input_cost_per_token": 0.0,
+    "output_cost_per_token": 0.0,
+    "litellm_provider": "hosted_vllm",
+    "mode": "chat"
+  }
+}
