@@ -354,7 +354,7 @@ def run_swe(cfg: dict, port: int) -> None:
             model_class=None,
             redo_existing=False,
             config_spec=agent_cfg,
-            environment_class="singularity",
+            environment_class=None,
         )
     finally:
         stop.set()

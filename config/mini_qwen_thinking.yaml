@@ -48,7 +48,13 @@ agent:
   step_limit: 250
   cost_limit: 3.0
 environment:
-  environment_class: singularity
+  environment_class: swe_singularity_env.SingularityEnvironment
+  cwd: /work
+  bind_host: .container_work
+  bind_container: /work
+  no_mount:
+    - cwd
+    - bind-paths
 model:
   model_name: "hosted_vllm/Qwen/Qwen3-30B-A3B-Thinking-2507"
   litellm_model_registry: "config/litellm_model_registry.json"
