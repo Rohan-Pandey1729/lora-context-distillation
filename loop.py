@@ -224,6 +224,12 @@ def _write_agent_config(run_id: str, port: int) -> Path:
     cfg = yaml.safe_load(_read_text(base_cfg_path))
     if not isinstance(cfg, dict):
         raise RuntimeError(f"Invalid agent config in {base_cfg_path}")
+    env_cfg = cfg.get("environment", {})
+    if isinstance(env_cfg, dict):
+        # Keep environment_class as "singularity" so swebench injects the image field.
+        if env_cfg.get("environment_class") == "swe_singularity_env.SingularityEnvironment":
+            env_cfg["environment_class"] = "singularity"
+        cfg["environment"] = env_cfg
     model_cfg = cfg.get("model", {})
     if not isinstance(model_cfg, dict):
         model_cfg = {}
