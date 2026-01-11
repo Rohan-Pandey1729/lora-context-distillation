@@ -48,7 +48,7 @@ agent:
   step_limit: 250
   cost_limit: 3.0
 environment:
-  environment_class: swe_singularity_env.SingularityEnvironment
+  environment_class: singularity
   cwd: /work
   bind_host: .container_work
   bind_container: /work

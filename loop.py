@@ -224,6 +224,12 @@ def _write_agent_config(run_id: str, port: int) -> Path:
     cfg = yaml.safe_load(_read_text(base_cfg_path))
     if not isinstance(cfg, dict):
         raise RuntimeError(f"Invalid agent config in {base_cfg_path}")
+    env_cfg = cfg.get("environment", {})
+    if isinstance(env_cfg, dict):
+        # Keep environment_class as "singularity" so swebench injects the image field.
+        if env_cfg.get("environment_class") == "swe_singularity_env.SingularityEnvironment":
+            env_cfg["environment_class"] = "singularity"
+        cfg["environment"] = env_cfg
     model_cfg = cfg.get("model", {})
     if not isinstance(model_cfg, dict):
         model_cfg = {}
@@ -291,6 +297,10 @@ def _rewrite_jsonl(preds_json: Path, jsonl_path: Path) -> None:
 
 def run_swe(cfg: dict, port: int) -> None:
     from minisweagent.run.extra import swebench as swe_run
+    from minisweagent import environments as mswe_envs
+
+    # Ensure swebench sets the image for "singularity" while we provide a custom implementation.
+    mswe_envs._ENVIRONMENT_MAPPING["singularity"] = "swe_singularity_env.SingularityEnvironment"
 
     subset = cfg.get("swe", {}).get("dataset_repo")
     split = cfg.get("swe", {}).get("split")
