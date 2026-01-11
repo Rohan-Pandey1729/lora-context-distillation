@@ -1,0 +1,603 @@
+2026-01-09 00:50:09,533 - minisweagent - INFO - Loading dataset MariusHobbhahn/SWE-bench-verified-mini, split test...
+2026-01-09 00:50:13,713 - minisweagent - INFO - Running on 50 instances...
+2026-01-09 00:50:13,714 - minisweagent - INFO - Loading agent config from 'runs/qwen3-32222503/swe/agent_config.yaml'
+2026-01-09 00:50:25,730 - minisweagent - ERROR - Error processing instance django__django-11790: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:27,780 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/django__django-11790/django__django-11790.traj.json'
+2026-01-09 00:50:29,222 - minisweagent - ERROR - Error processing instance django__django-11815: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:31,141 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/django__django-11815/django__django-11815.traj.json'
+2026-01-09 00:50:31,144 - minisweagent - ERROR - Error processing instance django__django-11848: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:32,840 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/django__django-11848/django__django-11848.traj.json'
+2026-01-09 00:50:32,843 - minisweagent - ERROR - Error processing instance django__django-11880: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:35,338 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/django__django-11880/django__django-11880.traj.json'
+2026-01-09 00:50:35,341 - minisweagent - ERROR - Error processing instance django__django-11885: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:36,778 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/django__django-11885/django__django-11885.traj.json'
+2026-01-09 00:50:36,783 - minisweagent - ERROR - Error processing instance django__django-11951: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:38,855 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/django__django-11951/django__django-11951.traj.json'
+2026-01-09 00:50:38,858 - minisweagent - ERROR - Error processing instance django__django-11964: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:40,993 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/django__django-11964/django__django-11964.traj.json'
+2026-01-09 00:50:41,002 - minisweagent - ERROR - Error processing instance django__django-11999: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:43,122 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/django__django-11999/django__django-11999.traj.json'
+2026-01-09 00:50:43,127 - minisweagent - ERROR - Error processing instance django__django-12039: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:44,667 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/django__django-12039/django__django-12039.traj.json'
+2026-01-09 00:50:44,671 - minisweagent - ERROR - Error processing instance django__django-12050: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:46,161 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/django__django-12050/django__django-12050.traj.json'
+2026-01-09 00:50:46,165 - minisweagent - ERROR - Error processing instance django__django-12143: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:46,912 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/django__django-12143/django__django-12143.traj.json'
+2026-01-09 00:50:46,917 - minisweagent - ERROR - Error processing instance django__django-12155: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:46,920 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/django__django-12155/django__django-12155.traj.json'
+2026-01-09 00:50:46,922 - minisweagent - ERROR - Error processing instance django__django-12193: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:46,925 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/django__django-12193/django__django-12193.traj.json'
+2026-01-09 00:50:46,927 - minisweagent - ERROR - Error processing instance django__django-12209: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:46,930 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/django__django-12209/django__django-12209.traj.json'
+2026-01-09 00:50:46,933 - minisweagent - ERROR - Error processing instance django__django-12262: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:46,935 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/django__django-12262/django__django-12262.traj.json'
+2026-01-09 00:50:46,937 - minisweagent - ERROR - Error processing instance django__django-12273: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:46,940 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/django__django-12273/django__django-12273.traj.json'
+2026-01-09 00:50:46,942 - minisweagent - ERROR - Error processing instance django__django-12276: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:46,945 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/django__django-12276/django__django-12276.traj.json'
+2026-01-09 00:50:46,947 - minisweagent - ERROR - Error processing instance django__django-12304: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:46,950 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/django__django-12304/django__django-12304.traj.json'
+2026-01-09 00:50:46,952 - minisweagent - ERROR - Error processing instance django__django-12308: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:46,955 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/django__django-12308/django__django-12308.traj.json'
+2026-01-09 00:50:46,957 - minisweagent - ERROR - Error processing instance django__django-12325: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:46,960 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/django__django-12325/django__django-12325.traj.json'
+2026-01-09 00:50:46,962 - minisweagent - ERROR - Error processing instance django__django-12406: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:46,965 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/django__django-12406/django__django-12406.traj.json'
+2026-01-09 00:50:46,967 - minisweagent - ERROR - Error processing instance django__django-12708: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:46,970 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/django__django-12708/django__django-12708.traj.json'
+2026-01-09 00:50:46,973 - minisweagent - ERROR - Error processing instance django__django-12713: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:46,975 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/django__django-12713/django__django-12713.traj.json'
+2026-01-09 00:50:46,978 - minisweagent - ERROR - Error processing instance django__django-12774: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:46,980 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/django__django-12774/django__django-12774.traj.json'
+2026-01-09 00:50:46,983 - minisweagent - ERROR - Error processing instance django__django-9296: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:46,986 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/django__django-9296/django__django-9296.traj.json'
+2026-01-09 00:50:46,988 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-10323: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:46,991 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/sphinx-doc__sphinx-10323/sphinx-doc__sphinx-10323.traj.json'
+2026-01-09 00:50:46,993 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-10435: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:46,996 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/sphinx-doc__sphinx-10435/sphinx-doc__sphinx-10435.traj.json'
+2026-01-09 00:50:46,999 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-10466: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:47,001 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/sphinx-doc__sphinx-10466/sphinx-doc__sphinx-10466.traj.json'
+2026-01-09 00:50:47,004 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-10673: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:47,007 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/sphinx-doc__sphinx-10673/sphinx-doc__sphinx-10673.traj.json'
+2026-01-09 00:50:47,009 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-11510: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:47,012 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/sphinx-doc__sphinx-11510/sphinx-doc__sphinx-11510.traj.json'
+2026-01-09 00:50:47,015 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-7590: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:47,017 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/sphinx-doc__sphinx-7590/sphinx-doc__sphinx-7590.traj.json'
+2026-01-09 00:50:47,020 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-7748: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:47,023 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/sphinx-doc__sphinx-7748/sphinx-doc__sphinx-7748.traj.json'
+2026-01-09 00:50:47,025 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-7757: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:47,028 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/sphinx-doc__sphinx-7757/sphinx-doc__sphinx-7757.traj.json'
+2026-01-09 00:50:47,031 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-7985: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:47,033 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/sphinx-doc__sphinx-7985/sphinx-doc__sphinx-7985.traj.json'
+2026-01-09 00:50:47,036 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-8035: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:47,039 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/sphinx-doc__sphinx-8035/sphinx-doc__sphinx-8035.traj.json'
+2026-01-09 00:50:47,042 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-8056: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:47,044 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/sphinx-doc__sphinx-8056/sphinx-doc__sphinx-8056.traj.json'
+2026-01-09 00:50:47,047 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-8265: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:47,050 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/sphinx-doc__sphinx-8265/sphinx-doc__sphinx-8265.traj.json'
+2026-01-09 00:50:47,053 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-8269: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:47,055 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/sphinx-doc__sphinx-8269/sphinx-doc__sphinx-8269.traj.json'
+2026-01-09 00:50:47,058 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-8475: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:47,061 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/sphinx-doc__sphinx-8475/sphinx-doc__sphinx-8475.traj.json'
+2026-01-09 00:50:47,064 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-8548: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:47,066 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/sphinx-doc__sphinx-8548/sphinx-doc__sphinx-8548.traj.json'
+2026-01-09 00:50:47,069 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-8551: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:47,072 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/sphinx-doc__sphinx-8551/sphinx-doc__sphinx-8551.traj.json'
+2026-01-09 00:50:47,075 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-8638: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:47,078 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/sphinx-doc__sphinx-8638/sphinx-doc__sphinx-8638.traj.json'
+2026-01-09 00:50:47,081 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-8721: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:47,083 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/sphinx-doc__sphinx-8721/sphinx-doc__sphinx-8721.traj.json'
+2026-01-09 00:50:47,086 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-9229: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:47,089 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/sphinx-doc__sphinx-9229/sphinx-doc__sphinx-9229.traj.json'
+2026-01-09 00:50:47,092 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-9230: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:47,095 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/sphinx-doc__sphinx-9230/sphinx-doc__sphinx-9230.traj.json'
+2026-01-09 00:50:47,098 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-9281: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:47,100 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/sphinx-doc__sphinx-9281/sphinx-doc__sphinx-9281.traj.json'
+2026-01-09 00:50:47,103 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-9320: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:47,106 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/sphinx-doc__sphinx-9320/sphinx-doc__sphinx-9320.traj.json'
+2026-01-09 00:50:47,109 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-9367: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:47,112 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/sphinx-doc__sphinx-9367/sphinx-doc__sphinx-9367.traj.json'
+2026-01-09 00:50:47,115 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-9461: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:47,118 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/sphinx-doc__sphinx-9461/sphinx-doc__sphinx-9461.traj.json'
+2026-01-09 00:50:47,121 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-9698: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 144, in process_instance
+    env = get_sb_environment(config, instance)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/environments/__init__.py", line 31, in get_environment
+    return get_environment_class(environment_class)(**config)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 44, in __init__
+    self.config = config_class(**kwargs)
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 'image'
+2026-01-09 00:50:47,123 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32222503/swe/sphinx-doc__sphinx-9698/sphinx-doc__sphinx-9698.traj.json'

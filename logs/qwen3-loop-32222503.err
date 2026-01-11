@@ -1,0 +1,365 @@
+downloading uv 0.9.22 x86_64-unknown-linux-gnu
+Resolved 208 packages in 3ms
+Audited 201 packages in 107ms
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Exception ignored in: <function SingularityEnvironment.__del__ at 0x14a98128e200>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 136, in __del__
+    self.cleanup()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py", line 132, in cleanup
+    shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+AttributeError: 'SingularityEnvironment' object has no attribute 'sandbox_dir'
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/loop.py", line 731, in <module>
+    main()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/loop.py", line 699, in main
+    full_run()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/loop.py", line 657, in full_run
+    run_swe(cfg, port)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/loop.py", line 366, in run_swe
+    _raise_on_exit_errors(out_dir)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/loop.py", line 271, in _raise_on_exit_errors
+    raise RuntimeError(f"SWE run had errors ({total} instances): {detail}")
+RuntimeError: SWE run had errors (50 instances): TypeError: 50

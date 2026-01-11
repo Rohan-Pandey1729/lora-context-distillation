@@ -1,0 +1,102 @@
+agent:
+  system_template: 'You are a helpful assistant that interacts with a computer shell
+    to solve programming tasks.
+
+    Respond with exactly two parts:
+
+    <think>
+
+    Brief reasoning about the single command you will run next.
+
+    </think>
+
+    ```bash
+
+    one non-interactive bash command (use && or || to chain if needed)
+
+    ```
+
+    Failure to follow this format will cause your response to be rejected.
+
+    '
+  instance_template: '{{task}}
+
+
+    Follow the workflow: inspect, reproduce if possible, edit, verify. Only the <think>
+    block may contain explanations; the bash block must only contain commands.
+
+    '
+  action_observation_template: '<returncode>{{output.returncode}}</returncode>
+
+    {% if output.output | length < 10000 -%}
+
+    <output>
+
+    {{ output.output -}}
+
+    </output>
+
+    {%- else -%}
+
+    <warning>
+
+    The output of your last command was too long.
+
+    Please try a different command that produces less output.
+
+    </warning>
+
+    {%- set elided_chars = output.output | length - 10000 -%}
+
+    <output_head>
+
+    {{ output.output[:5000] }}
+
+    </output_head>
+
+    <elided_chars>
+
+    {{ elided_chars }} characters elided
+
+    </elided_chars>
+
+    <output_tail>
+
+    {{ output.output[-5000:] }}
+
+    </output_tail>
+
+    {%- endif -%}
+
+    '
+  format_error_template: 'Please provide exactly one bash code block as shown:
+
+
+    <example_response>
+
+    <think>Short reasoning</think>
+
+    ```bash
+
+    your_command_here
+
+    ```
+
+    </example_response>
+
+    '
+  step_limit: 250
+  cost_limit: 3.0
+environment:
+  environment_class: singularity
+model:
+  model_name: hosted_vllm/Qwen/Qwen3-30B-A3B-Thinking-2507
+  litellm_model_registry: /gscratch/stf/rpande/lora-context-distillation/config/litellm_model_registry.json
+  model_kwargs:
+    custom_llm_provider: hosted_vllm
+    api_base: http://127.0.0.1:37837/v1
+    api_key: hf-local
+    temperature: 0.6
+    top_p: 0.95
+    top_k: 20
+    presence_penalty: 0.0

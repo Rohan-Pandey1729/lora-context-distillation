@@ -1,0 +1,1549 @@
+no checksums to verify
+installing to /gscratch/stf/rpande/lora-context-distillation/bin
+  uv
+  uvx
+everything's installed!
+uv 0.9.22
+Using RUN_ID=qwen3-32222503
+Using VLLM_PORT=8000
+👋 This is mini-swe-agent version 1.14.4.
+Loading global config from '/mmfs1/home/rpande/.config/mini-swe-agent/.env'
+minisweagent: INFO: Results will be saved to runs/qwen3-32222503/swe            
+Logging to 'runs/qwen3-32222503/swe/minisweagent.log'
+minisweagent: INFO: Loading dataset MariusHobbhahn/SWE-bench-verified-mini,     
+split test...                                                                   
+minisweagent: INFO: Running on 50 instances...                                  
+minisweagent: INFO: Loading agent config from                                   
+'runs/qwen3-32222503/swe/agent_config.yaml'                                     
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance django__django-11790:            
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/django__django-11790/django__django-11790.traj.json'   
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance django__django-11815:            
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/django__django-11815/django__django-11815.traj.json'   
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance django__django-11848:            
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/django__django-11848/django__django-11848.traj.json'   
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance django__django-11880:            
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/django__django-11880/django__django-11880.traj.json'   
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance django__django-11885:            
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/django__django-11885/django__django-11885.traj.json'   
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance django__django-11951:            
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/django__django-11951/django__django-11951.traj.json'   
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance django__django-11964:            
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/django__django-11964/django__django-11964.traj.json'   
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance django__django-11999:            
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/django__django-11999/django__django-11999.traj.json'   
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance django__django-12039:            
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/django__django-12039/django__django-12039.traj.json'   
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance django__django-12050:            
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/django__django-12050/django__django-12050.traj.json'   
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance django__django-12143:            
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/django__django-12143/django__django-12143.traj.json'   
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance django__django-12155:            
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/django__django-12155/django__django-12155.traj.json'   
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance django__django-12193:            
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/django__django-12193/django__django-12193.traj.json'   
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance django__django-12209:            
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/django__django-12209/django__django-12209.traj.json'   
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance django__django-12262:            
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/django__django-12262/django__django-12262.traj.json'   
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance django__django-12273:            
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/django__django-12273/django__django-12273.traj.json'   
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance django__django-12276:            
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/django__django-12276/django__django-12276.traj.json'   
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance django__django-12304:            
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/django__django-12304/django__django-12304.traj.json'   
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance django__django-12308:            
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/django__django-12308/django__django-12308.traj.json'   
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance django__django-12325:            
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/django__django-12325/django__django-12325.traj.json'   
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance django__django-12406:            
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/django__django-12406/django__django-12406.traj.json'   
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance django__django-12708:            
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/django__django-12708/django__django-12708.traj.json'   
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance django__django-12713:            
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/django__django-12713/django__django-12713.traj.json'   
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance django__django-12774:            
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/django__django-12774/django__django-12774.traj.json'   
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance django__django-9296:             
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/django__django-9296/django__django-9296.traj.json'     
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance sphinx-doc__sphinx-10323:        
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/sphinx-doc__sphinx-10323/sphinx-doc__sphinx-10323.traj.
+json'                                                                           
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance sphinx-doc__sphinx-10435:        
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/sphinx-doc__sphinx-10435/sphinx-doc__sphinx-10435.traj.
+json'                                                                           
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance sphinx-doc__sphinx-10466:        
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/sphinx-doc__sphinx-10466/sphinx-doc__sphinx-10466.traj.
+json'                                                                           
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance sphinx-doc__sphinx-10673:        
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/sphinx-doc__sphinx-10673/sphinx-doc__sphinx-10673.traj.
+json'                                                                           
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance sphinx-doc__sphinx-11510:        
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/sphinx-doc__sphinx-11510/sphinx-doc__sphinx-11510.traj.
+json'                                                                           
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance sphinx-doc__sphinx-7590:         
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/sphinx-doc__sphinx-7590/sphinx-doc__sphinx-7590.traj.js
+on'                                                                             
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance sphinx-doc__sphinx-7748:         
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/sphinx-doc__sphinx-7748/sphinx-doc__sphinx-7748.traj.js
+on'                                                                             
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance sphinx-doc__sphinx-7757:         
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/sphinx-doc__sphinx-7757/sphinx-doc__sphinx-7757.traj.js
+on'                                                                             
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance sphinx-doc__sphinx-7985:         
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/sphinx-doc__sphinx-7985/sphinx-doc__sphinx-7985.traj.js
+on'                                                                             
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance sphinx-doc__sphinx-8035:         
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/sphinx-doc__sphinx-8035/sphinx-doc__sphinx-8035.traj.js
+on'                                                                             
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance sphinx-doc__sphinx-8056:         
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/sphinx-doc__sphinx-8056/sphinx-doc__sphinx-8056.traj.js
+on'                                                                             
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance sphinx-doc__sphinx-8265:         
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/sphinx-doc__sphinx-8265/sphinx-doc__sphinx-8265.traj.js
+on'                                                                             
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance sphinx-doc__sphinx-8269:         
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/sphinx-doc__sphinx-8269/sphinx-doc__sphinx-8269.traj.js
+on'                                                                             
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance sphinx-doc__sphinx-8475:         
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/sphinx-doc__sphinx-8475/sphinx-doc__sphinx-8475.traj.js
+on'                                                                             
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance sphinx-doc__sphinx-8548:         
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/sphinx-doc__sphinx-8548/sphinx-doc__sphinx-8548.traj.js
+on'                                                                             
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance sphinx-doc__sphinx-8551:         
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/sphinx-doc__sphinx-8551/sphinx-doc__sphinx-8551.traj.js
+on'                                                                             
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance sphinx-doc__sphinx-8638:         
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/sphinx-doc__sphinx-8638/sphinx-doc__sphinx-8638.traj.js
+on'                                                                             
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance sphinx-doc__sphinx-8721:         
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/sphinx-doc__sphinx-8721/sphinx-doc__sphinx-8721.traj.js
+on'                                                                             
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance sphinx-doc__sphinx-9229:         
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/sphinx-doc__sphinx-9229/sphinx-doc__sphinx-9229.traj.js
+on'                                                                             
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance sphinx-doc__sphinx-9230:         
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/sphinx-doc__sphinx-9230/sphinx-doc__sphinx-9230.traj.js
+on'                                                                             
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance sphinx-doc__sphinx-9281:         
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/sphinx-doc__sphinx-9281/sphinx-doc__sphinx-9281.traj.js
+on'                                                                             
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance sphinx-doc__sphinx-9320:         
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/sphinx-doc__sphinx-9320/sphinx-doc__sphinx-9320.traj.js
+on'                                                                             
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance sphinx-doc__sphinx-9367:         
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/sphinx-doc__sphinx-9367/sphinx-doc__sphinx-9367.traj.js
+on'                                                                             
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance sphinx-doc__sphinx-9461:         
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/sphinx-doc__sphinx-9461/sphinx-doc__sphinx-9461.traj.js
+on'                                                                             
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: ERROR: Error processing instance sphinx-doc__sphinx-9698:         
+SingularityEnvironmentConfig.__init__() missing 1 required positional argument: 
+'image'                                                                         
+Traceback (most recent call last):                                              
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 144, in process_instance           
+    env = get_sb_environment(config, instance)                                  
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/run/extra/swebench.py", line 88, in get_sb_environment          
+    env = get_environment(env_config)                                           
+  File                                                                          
+"/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packag
+es/minisweagent/environments/__init__.py", line 31, in get_environment          
+    return get_environment_class(environment_class)(**config)                   
+  File                                                                          
+"/mmfs1/gscratch/stf/rpande/lora-context-distillation/swe_singularity_env.py",  
+line 44, in __init__                                                            
+    self.config = config_class(**kwargs)                                        
+TypeError: SingularityEnvironmentConfig.__init__() missing 1 required positional
+argument: 'image'                                                               
+minisweagent: INFO: Saved trajectory to                                         
+'runs/qwen3-32222503/swe/sphinx-doc__sphinx-9698/sphinx-doc__sphinx-9698.traj.js
+on'                                                                             
+┏━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Exit Status ┃ Count ┃ Most recent instances                                  ┃
+┡━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ TypeError   │    50 │ sphinx-doc__sphinx-9698, sphinx-doc__sphinx-9461,      │
+│             │       │ sp...                                                  │
+└─────────────┴───────┴────────────────────────────────────────────────────────┘
+  Overall Progress ($0.00) ━━━━━━━━━━━━━━━━━━━━━ 50/50 100% 0:00:33 eta: 0:00:00
