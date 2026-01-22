@@ -1,0 +1,8 @@
+no checksums to verify
+installing to /gscratch/stf/rpande/lora-context-distillation/bin
+  uv
+  uvx
+everything's installed!
+uv 0.9.24
+Using RUN_ID=qwen3-32252998
+Using VLLM_PORT=8000

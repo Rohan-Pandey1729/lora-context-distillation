@@ -1,0 +1,13 @@
+downloading uv 0.9.24 x86_64-unknown-linux-gnu
+Resolved 208 packages in 4ms
+Audited 201 packages in 179ms
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/loop.py", line 741, in <module>
+    main()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/loop.py", line 709, in main
+    full_run()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/loop.py", line 666, in full_run
+    wait_vllm_ready(port, timeout_s=2400)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/loop.py", line 85, in wait_vllm_ready
+    raise TimeoutError(f"vLLM not ready after {timeout_s}s, last={last}")
+TimeoutError: vLLM not ready after 2400s, last=ConnectionError(MaxRetryError("HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /health (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1472997c6980>: Failed to establish a new connection: [Errno 111] Connection refused'))"))
