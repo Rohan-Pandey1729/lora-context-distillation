@@ -661,6 +661,7 @@ def full_run() -> None:
     model_b = cfg["model_b_base"]
     logdir = Path(f"logs/vllm_{run_id}")
 
+    kill_port(port)
     proc = start_vllm(model_b, port, tp=2, logdir=logdir)
     try:
         wait_vllm_ready(port, timeout_s=2400)
