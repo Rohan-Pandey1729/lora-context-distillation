@@ -63,7 +63,25 @@ def json_dump(obj: dict, path: str | Path) -> None:
     tmp.replace(p)
 
 
-def wait_vllm_ready(port: int, timeout_s: int = 900) -> None:
+def _tail_file(path: Path, max_bytes: int = 8000) -> str:
+    try:
+        with path.open("rb") as f:
+            f.seek(0, os.SEEK_END)
+            size = f.tell()
+            f.seek(max(size - max_bytes, 0), os.SEEK_SET)
+            data = f.read()
+        return data.decode("utf-8", errors="replace").strip()
+    except FileNotFoundError:
+        return ""
+
+
+def wait_vllm_ready(
+    port: int,
+    timeout_s: int = 900,
+    *,
+    proc: subprocess.Popen | None = None,
+    logdir: Path | None = None,
+) -> None:
     import requests
 
     base = f"http://127.0.0.1:{port}"
@@ -73,6 +91,12 @@ def wait_vllm_ready(port: int, timeout_s: int = 900) -> None:
     t0 = time.time()
     last = None
     while time.time() - t0 < timeout_s:
+        if proc is not None and proc.poll() is not None:
+            stderr_tail = _tail_file(logdir / "server.stderr.log") if logdir else ""
+            msg = f"vLLM exited before becoming ready (code {proc.returncode})."
+            if stderr_tail:
+                msg += f" Last stderr:\n{stderr_tail}"
+            raise RuntimeError(msg)
         try:
             r = sess.get(f"{base}/health", timeout=5)
             if r.status_code == 200:
@@ -82,7 +106,11 @@ def wait_vllm_ready(port: int, timeout_s: int = 900) -> None:
         except Exception as exc:
             last = repr(exc)
         time.sleep(2)
-    raise TimeoutError(f"vLLM not ready after {timeout_s}s, last={last}")
+    stderr_tail = _tail_file(logdir / "server.stderr.log") if logdir else ""
+    msg = f"vLLM not ready after {timeout_s}s, last={last}"
+    if stderr_tail:
+        msg += f"\nLast stderr:\n{stderr_tail}"
+    raise TimeoutError(msg)
 
 
 def _pids_for_port(port: int) -> set[str]:
@@ -226,8 +254,11 @@ def _write_agent_config(run_id: str, port: int) -> Path:
         raise RuntimeError(f"Invalid agent config in {base_cfg_path}")
     env_cfg = cfg.get("environment", {})
     if isinstance(env_cfg, dict):
+        env_class = env_cfg.get("environment_class")
         # Keep environment_class as "singularity" so swebench injects the image field.
-        if env_cfg.get("environment_class") == "swe_singularity_env.SingularityEnvironment":
+        if env_class in (None, ""):
+            env_cfg["environment_class"] = "singularity"
+        elif isinstance(env_class, str) and env_class.endswith("SingularityEnvironment"):
             env_cfg["environment_class"] = "singularity"
         cfg["environment"] = env_cfg
     model_cfg = cfg.get("model", {})
@@ -664,7 +695,7 @@ def full_run() -> None:
     kill_port(port)
     proc = start_vllm(model_b, port, tp=2, logdir=logdir)
     try:
-        wait_vllm_ready(port, timeout_s=2400)
+        wait_vllm_ready(port, timeout_s=2400, proc=proc, logdir=logdir)
         run_swe(cfg, port)
         preds_json = Path(f"runs/{run_id}/swe/preds.json")
         out_jsonl = Path(f"runs/{run_id}/sft/sft_qwenA_from_B_mini.jsonl")
