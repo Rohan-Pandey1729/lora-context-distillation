@@ -15,7 +15,7 @@ from typing import Any
 
 @dataclass
 class SingularityEnvironmentConfig:
-    image: str = field(default_factory=lambda: os.getenv("MSWEA_SINGULARITY_IMAGE", ""))
+    image: str
     cwd: str = "/"
     env: dict[str, str] = field(default_factory=dict)
     """Environment variables to set in the container."""
@@ -23,10 +23,7 @@ class SingularityEnvironmentConfig:
     """Environment variables to forward to the container."""
     timeout: int = 30
     """Timeout for executing commands in the container."""
-    executable: str = field(
-        default_factory=lambda: os.getenv("MSWEA_SINGULARITY_EXECUTABLE")
-        or ("singularity" if shutil.which("singularity") else "apptainer")
-    )
+    executable: str = os.getenv("MSWEA_SINGULARITY_EXECUTABLE", "singularity")
     """Path to the singularity executable."""
     sandbox_build_retries: int = 3
     """Number of retries for building the sandbox if an error occurs."""
@@ -37,13 +34,6 @@ class SingularityEnvironmentConfig:
     no_mount: list[str] = field(default_factory=lambda: ["cwd", "bind-paths"])
     """Apptainer mount categories to disable via --no-mount."""
 
-    def __post_init__(self) -> None:
-        if not self.image:
-            raise ValueError(
-                "Singularity image is required. Set environment_class to 'singularity' so "
-                "swebench injects the image, or provide environment.image / MSWEA_SINGULARITY_IMAGE."
-            )
-
 
 class SingularityEnvironment:
     def __init__(
@@ -51,7 +41,6 @@ class SingularityEnvironment:
     ):
         """Singularity environment. See `SingularityEnvironmentConfig` for kwargs."""
         self.logger = logger or logging.getLogger("minisweagent.environment")
-        self.sandbox_dir: Path | None = None
         self.config = config_class(**kwargs)
         self.sandbox_dir = self._build_sandbox()
         self._bind_host: Path | None = None
@@ -140,12 +129,8 @@ class SingularityEnvironment:
         return {"output": result.stdout, "returncode": result.returncode}
 
     def cleanup(self):
-        if self.sandbox_dir is not None:
-            shutil.rmtree(self.sandbox_dir, ignore_errors=True)
+        shutil.rmtree(self.sandbox_dir, ignore_errors=True)
 
     def __del__(self):
         """Cleanup sandbox when object is destroyed."""
-        try:
-            self.cleanup()
-        except Exception:
-            pass
+        self.cleanup()
