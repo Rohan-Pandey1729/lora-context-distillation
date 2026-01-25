@@ -27,7 +27,58 @@ def _read_text(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
 
+def _within_cwd(path: Path, root: Path) -> Path:
+    resolved = path.resolve()
+    try:
+        resolved.relative_to(root)
+    except ValueError as exc:
+        raise RuntimeError(f"Path escapes cwd: {resolved}") from exc
+    return resolved
+
+
+def _set_local_dir_env(key: str, path: Path, root: Path) -> Path:
+    if key in os.environ:
+        target = _within_cwd(Path(os.environ[key]).expanduser(), root)
+    else:
+        target = _within_cwd(path, root)
+        os.environ[key] = str(target)
+    target.mkdir(parents=True, exist_ok=True)
+    return target
+
+
+def ensure_local_runtime_env() -> None:
+    root = Path.cwd().resolve()
+    cache_root = root / ".cache"
+    apptainer_root = cache_root / "apptainer"
+    apptainer_tmp = apptainer_root / "tmp"
+
+    _set_local_dir_env("BASE_CACHE_DIR", cache_root, root)
+    _set_local_dir_env("XDG_CACHE_HOME", cache_root, root)
+    _set_local_dir_env("TRITON_CACHE_DIR", cache_root / "triton", root)
+    _set_local_dir_env("TORCH_HOME", cache_root / "torch", root)
+    _set_local_dir_env("TORCH_EXTENSIONS_DIR", cache_root / "torch_extensions", root)
+    _set_local_dir_env("TORCHINDUCTOR_CACHE_DIR", cache_root / "inductor", root)
+    _set_local_dir_env("HF_HOME", cache_root / "hf", root)
+    _set_local_dir_env("VLLM_CACHE_DIR", cache_root / "vllm", root)
+    _set_local_dir_env("VLLM_CACHE_ROOT", cache_root / "vllm", root)
+
+    _set_local_dir_env("UV_PROJECT_ENVIRONMENT", root / ".venv", root)
+    _set_local_dir_env("UV_CACHE_DIR", cache_root / "uv", root)
+    _set_local_dir_env("UV_AUTH_DIR", root / "share/uv", root)
+    _set_local_dir_env("UV_PYTHON_INSTALL_DIR", root / "bin/uvpython", root)
+
+    _set_local_dir_env("APPTAINER_CACHEDIR", apptainer_root / "cache", root)
+    tmp_dir = _set_local_dir_env("APPTAINER_TMPDIR", apptainer_tmp, root)
+    _set_local_dir_env("TMPDIR", tmp_dir, root)
+    _set_local_dir_env("TEMP", tmp_dir, root)
+    _set_local_dir_env("TMP", tmp_dir, root)
+    tempfile.tempdir = str(tmp_dir)
+
+    os.environ.setdefault("VLLM_USAGE_STATS", "0")
+
+
 def load_conf() -> dict:
+    ensure_local_runtime_env()
     if not CONFIG_PATH.exists():
         raise RuntimeError(f"Missing config at {CONFIG_PATH}")
     cfg = yaml.safe_load(_read_text(CONFIG_PATH))

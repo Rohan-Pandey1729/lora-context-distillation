@@ -6,11 +6,12 @@ import logging
 import os
 import shutil
 import subprocess
-import tempfile
 import uuid
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
 from typing import Any
+
+import tempfile
 
 
 DEFAULT_BIND_DIRS = [
@@ -28,6 +29,27 @@ DEFAULT_BIND_FILES = [
     "/etc/passwd",
     "/etc/group",
 ]
+
+
+def _repo_root() -> Path:
+    return Path.cwd().resolve()
+
+
+def _ensure_within_root(path: Path, root: Path) -> Path:
+    resolved = path.resolve()
+    try:
+        resolved.relative_to(root)
+    except ValueError as exc:  # pragma: no cover - defensive guard
+        raise ValueError(f"Path escapes cwd: {resolved}") from exc
+    return resolved
+
+
+def _resolve_local_path(path_str: str) -> Path:
+    root = _repo_root()
+    path = Path(path_str).expanduser()
+    if path.is_absolute():
+        return _ensure_within_root(path, root)
+    return _ensure_within_root(root / path, root)
 
 
 @dataclass
@@ -48,10 +70,16 @@ class SingularityEnvironmentConfig:
     """Host path to bind into the container."""
     bind_container: str = "/work"
     """Container path to use for the bound host directory."""
-    no_mount: list[str] = field(default_factory=lambda: ["cwd", "bind-paths"])
+    no_mount: list[str] = field(default_factory=lambda: ["cwd", "bind-paths", "hostfs", "tmp", "/mmfs1"])
     """Apptainer mount categories to disable via --no-mount."""
-    extra_bind_dirs: list[str] = field(default_factory=lambda: ["/mmfs1"])
+    extra_bind_dirs: list[str] = field(default_factory=list)
     """Additional bind destinations to pre-create in the sandbox."""
+    sandbox_root: str = ".cache/apptainer/sandboxes"
+    """Sandbox root directory on the host (kept inside cwd)."""
+    apptainer_cache_dir: str = ".cache/apptainer/cache"
+    """Apptainer cache directory on the host (kept inside cwd)."""
+    apptainer_tmp_dir: str = ".cache/apptainer/tmp"
+    """Apptainer temporary directory on the host (kept inside cwd)."""
 
 
 class SingularityEnvironment:
@@ -61,15 +89,32 @@ class SingularityEnvironment:
         """Singularity environment. See `SingularityEnvironmentConfig` for kwargs."""
         self.logger = logger or logging.getLogger("minisweagent.environment")
         self.config = config_class(**kwargs)
+        self._prepare_host_env()
         self.sandbox_dir = self._build_sandbox()
         self._bind_host: Path | None = None
         self._prepare_paths()
 
+    def _prepare_host_env(self) -> None:
+        cache_dir = _resolve_local_path(self.config.apptainer_cache_dir)
+        tmp_dir = _resolve_local_path(self.config.apptainer_tmp_dir)
+        cache_dir.mkdir(parents=True, exist_ok=True)
+        tmp_dir.mkdir(parents=True, exist_ok=True)
+
+        # Keep Apptainer and Python temporary data within cwd.
+        os.environ.setdefault("APPTAINER_CACHEDIR", str(cache_dir))
+        os.environ.setdefault("APPTAINER_TMPDIR", str(tmp_dir))
+        os.environ.setdefault("TMPDIR", str(tmp_dir))
+        os.environ.setdefault("TEMP", str(tmp_dir))
+        os.environ.setdefault("TMP", str(tmp_dir))
+        tempfile.tempdir = str(tmp_dir)
+
     def _build_sandbox(self) -> Path:
         # Building the sandbox can fail (very rarely), so we retry it
         max_retries = self.config.sandbox_build_retries
+        sandbox_root = _resolve_local_path(self.config.sandbox_root)
+        sandbox_root.mkdir(parents=True, exist_ok=True)
         for attempt in range(max_retries):
-            sandbox_dir = Path(tempfile.gettempdir()) / f"minisweagent-{uuid.uuid4().hex[:8]}"
+            sandbox_dir = sandbox_root / f"minisweagent-{uuid.uuid4().hex[:8]}"
             try:
                 subprocess.run(
                     [self.config.executable, "build", "--sandbox", sandbox_dir, self.config.image],
@@ -96,10 +141,7 @@ class SingularityEnvironment:
         self._ensure_container_path(self.config.cwd)
 
     def _resolve_bind_host(self, path: str) -> Path:
-        host = Path(path).expanduser()
-        if not host.is_absolute():
-            host = Path.cwd() / host
-        return host.absolute()
+        return _resolve_local_path(path)
 
     def _ensure_system_bind_points(self) -> None:
         for path in DEFAULT_BIND_DIRS:
@@ -135,11 +177,12 @@ class SingularityEnvironment:
         cmd = [self.config.executable, "exec"]
 
         # Do not inherit directories and env vars from host
-        cmd.extend(["--contain", "--cleanenv"])
+        cmd.extend(["--contain", "--no-home", "--cleanenv"])
 
         if self.config.no_mount:
             items = [item for item in self.config.no_mount if item]
             if items:
+                items = list(dict.fromkeys(items))
                 cmd.extend(["--no-mount", ",".join(items)])
 
         if self._bind_host is not None:
