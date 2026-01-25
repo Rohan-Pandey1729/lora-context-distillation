@@ -13,6 +13,23 @@ from pathlib import Path
 from typing import Any
 
 
+DEFAULT_BIND_DIRS = [
+    "/dev",
+    "/proc",
+    "/sys",
+    "/tmp",
+    "/var/tmp",
+    "/home",
+]
+DEFAULT_BIND_FILES = [
+    "/etc/hosts",
+    "/etc/localtime",
+    "/etc/resolv.conf",
+    "/etc/passwd",
+    "/etc/group",
+]
+
+
 @dataclass
 class SingularityEnvironmentConfig:
     image: str
@@ -33,6 +50,8 @@ class SingularityEnvironmentConfig:
     """Container path to use for the bound host directory."""
     no_mount: list[str] = field(default_factory=lambda: ["cwd", "bind-paths"])
     """Apptainer mount categories to disable via --no-mount."""
+    extra_bind_dirs: list[str] = field(default_factory=lambda: ["/mmfs1"])
+    """Additional bind destinations to pre-create in the sandbox."""
 
 
 class SingularityEnvironment:
@@ -68,6 +87,8 @@ class SingularityEnvironment:
         return sandbox_dir
 
     def _prepare_paths(self) -> None:
+        # With --writable, Apptainer requires bind destinations to exist.
+        self._ensure_system_bind_points()
         if self.config.bind_host and self.config.bind_container:
             self._bind_host = self._resolve_bind_host(self.config.bind_host)
             self._bind_host.mkdir(parents=True, exist_ok=True)
@@ -80,6 +101,14 @@ class SingularityEnvironment:
             host = Path.cwd() / host
         return host.absolute()
 
+    def _ensure_system_bind_points(self) -> None:
+        for path in DEFAULT_BIND_DIRS:
+            self._ensure_container_path(path)
+        for path in self.config.extra_bind_dirs:
+            self._ensure_container_path(path)
+        for path in DEFAULT_BIND_FILES:
+            self._ensure_container_file(path)
+
     def _ensure_container_path(self, path: str) -> None:
         if not path or path == "/":
             return
@@ -87,6 +116,16 @@ class SingularityEnvironment:
             raise ValueError(f"Container path must be absolute: {path}")
         target = self.sandbox_dir / path.lstrip("/")
         target.mkdir(parents=True, exist_ok=True)
+
+    def _ensure_container_file(self, path: str) -> None:
+        if not path or path == "/":
+            return
+        if not path.startswith("/"):
+            raise ValueError(f"Container path must be absolute: {path}")
+        target = self.sandbox_dir / path.lstrip("/")
+        target.parent.mkdir(parents=True, exist_ok=True)
+        if not target.exists():
+            target.touch()
 
     def get_template_vars(self) -> dict[str, Any]:
         return asdict(self.config)
