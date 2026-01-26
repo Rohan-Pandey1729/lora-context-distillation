@@ -5,8 +5,8 @@
 #SBATCH --nodes=1
 #SBATCH --gpus=l40s:2
 #SBATCH --cpus-per-task=24
-#SBATCH --mem=128G
-#SBATCH --time=12:00:00
+#SBATCH --mem=256G
+#SBATCH --time=36:00:00
 #SBATCH --output=logs/%x-%j.out
 #SBATCH --error=logs/%x-%j.err
 #SBATCH --chdir=.
