@@ -1,0 +1,237 @@
+2026-01-23 04:40:32,824 - minisweagent - INFO - Loading dataset MariusHobbhahn/SWE-bench-verified-mini, split test...
+2026-01-23 04:40:44,424 - minisweagent - INFO - Running on 50 instances...
+2026-01-23 04:40:44,424 - minisweagent - INFO - Loading agent config from 'runs/qwen3-32556485/swe/agent_config.yaml'
+2026-01-23 05:40:07,429 - minisweagent - ERROR - Error processing instance django__django-11790: litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - This model's maximum context length is 32768 tokens. However, you requested 32810 tokens in the messages, Please reduce the length of the messages.
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/llms/openai/openai.py", line 745, in completion
+    raise e
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/llms/openai/openai.py", line 673, in completion
+    ) = self.make_sync_openai_chat_completion_request(
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/litellm_core_utils/logging_utils.py", line 237, in sync_wrapper
+    result = func(*args, **kwargs)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/llms/openai/openai.py", line 489, in make_sync_openai_chat_completion_request
+    raise e
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/llms/openai/openai.py", line 471, in make_sync_openai_chat_completion_request
+    raw_response = openai_client.chat.completions.with_raw_response.create(
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/openai/_legacy_response.py", line 364, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/openai/resources/chat/completions/completions.py", line 1189, in create
+    return self._post(
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 32810 tokens in the messages, Please reduce the length of the messages.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/main.py", line 2158, in completion
+    raise e
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/main.py", line 2130, in completion
+    response = openai_chat_completions.completion(
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/llms/openai/openai.py", line 756, in completion
+    raise OpenAIError(
+litellm.llms.openai.common_utils.OpenAIError: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 32810 tokens in the messages, Please reduce the length of the messages.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 152, in process_instance
+    exit_status, result = agent.run(task)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/agents/default.py", line 81, in run
+    self.step()
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 66, in step
+    return super().step()
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/agents/default.py", line 90, in step
+    return self.get_observation(self.query())
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/agents/default.py", line 96, in query
+    response = self.model.query(self.messages)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/models/litellm_model.py", line 68, in query
+    response = self._query(messages, **kwargs)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 378, in iter
+    result = action(retry_state)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 400, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+  File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/models/litellm_model.py", line 58, in _query
+    return litellm.completion(
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/utils.py", line 1381, in wrapper
+    raise e
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/utils.py", line 1250, in wrapper
+    result = original_function(*args, **kwargs)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/main.py", line 3772, in completion
+    raise exception_type(
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2328, in exception_type
+    raise e
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 363, in exception_type
+    raise ContextWindowExceededError(
+litellm.exceptions.ContextWindowExceededError: litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - This model's maximum context length is 32768 tokens. However, you requested 32810 tokens in the messages, Please reduce the length of the messages.
+2026-01-23 05:40:09,069 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32556485/swe/django__django-11790/django__django-11790.traj.json'
+2026-01-23 10:01:31,755 - minisweagent - ERROR - Error processing instance django__django-11815: litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - This model's maximum context length is 32768 tokens. However, you requested 32810 tokens in the messages, Please reduce the length of the messages.
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/llms/openai/openai.py", line 745, in completion
+    raise e
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/llms/openai/openai.py", line 673, in completion
+    ) = self.make_sync_openai_chat_completion_request(
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/litellm_core_utils/logging_utils.py", line 237, in sync_wrapper
+    result = func(*args, **kwargs)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/llms/openai/openai.py", line 489, in make_sync_openai_chat_completion_request
+    raise e
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/llms/openai/openai.py", line 471, in make_sync_openai_chat_completion_request
+    raw_response = openai_client.chat.completions.with_raw_response.create(
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/openai/_legacy_response.py", line 364, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/openai/resources/chat/completions/completions.py", line 1189, in create
+    return self._post(
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 32810 tokens in the messages, Please reduce the length of the messages.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/main.py", line 2158, in completion
+    raise e
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/main.py", line 2130, in completion
+    response = openai_chat_completions.completion(
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/llms/openai/openai.py", line 756, in completion
+    raise OpenAIError(
+litellm.llms.openai.common_utils.OpenAIError: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 32810 tokens in the messages, Please reduce the length of the messages.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 152, in process_instance
+    exit_status, result = agent.run(task)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/agents/default.py", line 81, in run
+    self.step()
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 66, in step
+    return super().step()
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/agents/default.py", line 90, in step
+    return self.get_observation(self.query())
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/agents/default.py", line 96, in query
+    response = self.model.query(self.messages)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/models/litellm_model.py", line 68, in query
+    response = self._query(messages, **kwargs)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 378, in iter
+    result = action(retry_state)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 400, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+  File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/models/litellm_model.py", line 58, in _query
+    return litellm.completion(
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/utils.py", line 1381, in wrapper
+    raise e
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/utils.py", line 1250, in wrapper
+    result = original_function(*args, **kwargs)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/main.py", line 3772, in completion
+    raise exception_type(
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2328, in exception_type
+    raise e
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 363, in exception_type
+    raise ContextWindowExceededError(
+litellm.exceptions.ContextWindowExceededError: litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - This model's maximum context length is 32768 tokens. However, you requested 32810 tokens in the messages, Please reduce the length of the messages.
+2026-01-23 10:01:31,940 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32556485/swe/django__django-11815/django__django-11815.traj.json'
+2026-01-23 14:48:45,477 - minisweagent - ERROR - Error processing instance django__django-11848: litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - This model's maximum context length is 32768 tokens. However, you requested 32810 tokens in the messages, Please reduce the length of the messages.
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/llms/openai/openai.py", line 745, in completion
+    raise e
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/llms/openai/openai.py", line 673, in completion
+    ) = self.make_sync_openai_chat_completion_request(
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/litellm_core_utils/logging_utils.py", line 237, in sync_wrapper
+    result = func(*args, **kwargs)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/llms/openai/openai.py", line 489, in make_sync_openai_chat_completion_request
+    raise e
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/llms/openai/openai.py", line 471, in make_sync_openai_chat_completion_request
+    raw_response = openai_client.chat.completions.with_raw_response.create(
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/openai/_legacy_response.py", line 364, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/openai/resources/chat/completions/completions.py", line 1189, in create
+    return self._post(
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 32810 tokens in the messages, Please reduce the length of the messages.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/main.py", line 2158, in completion
+    raise e
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/main.py", line 2130, in completion
+    response = openai_chat_completions.completion(
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/llms/openai/openai.py", line 756, in completion
+    raise OpenAIError(
+litellm.llms.openai.common_utils.OpenAIError: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 32810 tokens in the messages, Please reduce the length of the messages.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 152, in process_instance
+    exit_status, result = agent.run(task)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/agents/default.py", line 81, in run
+    self.step()
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/run/extra/swebench.py", line 66, in step
+    return super().step()
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/agents/default.py", line 90, in step
+    return self.get_observation(self.query())
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/agents/default.py", line 96, in query
+    response = self.model.query(self.messages)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/models/litellm_model.py", line 68, in query
+    response = self._query(messages, **kwargs)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 378, in iter
+    result = action(retry_state)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 400, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+  File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/minisweagent/models/litellm_model.py", line 58, in _query
+    return litellm.completion(
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/utils.py", line 1381, in wrapper
+    raise e
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/utils.py", line 1250, in wrapper
+    result = original_function(*args, **kwargs)
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/main.py", line 3772, in completion
+    raise exception_type(
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2328, in exception_type
+    raise e
+  File "/gscratch/stf/rpande/lora-context-distillation/.venv/lib/python3.10/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 363, in exception_type
+    raise ContextWindowExceededError(
+litellm.exceptions.ContextWindowExceededError: litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - This model's maximum context length is 32768 tokens. However, you requested 32810 tokens in the messages, Please reduce the length of the messages.
+2026-01-23 14:48:45,539 - minisweagent - INFO - Saved trajectory to 'runs/qwen3-32556485/swe/django__django-11848/django__django-11848.traj.json'
