@@ -11,6 +11,11 @@ if [[ -z "${HF_TOKEN:-}" ]]; then
     export HF_TOKEN="$(cat secrets/hf_token)"
   fi
 fi
+if [[ -z "${GH_TOKEN:-}" ]]; then
+  if [[ -f secrets/gh_token ]]; then
+    export GH_TOKEN="$(cat secrets/gh_token)"
+  fi
+fi
 if [[ -z "${HF_TOKEN:-}" ]]; then
   echo "[fatal] HF_TOKEN is required (export it or create secrets/hf_token)" >&2
   exit 42

@@ -29,6 +29,13 @@ def _read_text(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
 
+def _load_secret_env(var: str, secret_path: Path) -> None:
+    if os.environ.get(var):
+        return
+    if secret_path.exists():
+        os.environ[var] = secret_path.read_text().strip()
+
+
 def _within_cwd(path: Path, root: Path) -> Path:
     resolved = path.resolve()
     try:
@@ -85,6 +92,7 @@ def ensure_local_runtime_env() -> None:
 
 def load_conf() -> dict:
     ensure_local_runtime_env()
+    _load_secret_env("GH_TOKEN", Path("secrets/gh_token"))
     if not CONFIG_PATH.exists():
         raise RuntimeError(f"Missing config at {CONFIG_PATH}")
     cfg = yaml.safe_load(_read_text(CONFIG_PATH))
@@ -745,36 +753,41 @@ def commit_and_pr(cfg: dict) -> None:
     if shutil.which("gh") is None:
         print("[warn] gh not found; skipping PR creation")
         return
-    auth = subprocess.run(
-        ["gh", "auth", "status", "-h", "github.com"],
-        check=False,
-        text=True,
-        capture_output=True,
-        cwd=ROOT,
-    )
-    if auth.returncode != 0:
-        print("[warn] gh not authenticated; skipping PR creation")
-        return
+    token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")
+    if not token:
+        auth = subprocess.run(
+            ["gh", "auth", "status", "-h", "github.com"],
+            check=False,
+            text=True,
+            capture_output=True,
+            cwd=ROOT,
+        )
+        if auth.returncode != 0:
+            print("[warn] gh not authenticated; skipping PR creation")
+            return
     base = _git_default_branch()
-    subprocess.run(
-        [
-            "gh",
-            "pr",
-            "create",
-            "--base",
-            base,
-            "--head",
-            branch,
-            "--title",
-            title,
-            "--body",
-            body,
-        ],
-        check=True,
-        text=True,
-        capture_output=True,
-        cwd=ROOT,
-    )
+    try:
+        subprocess.run(
+            [
+                "gh",
+                "pr",
+                "create",
+                "--base",
+                base,
+                "--head",
+                branch,
+                "--title",
+                title,
+                "--body",
+                body,
+            ],
+            check=True,
+            text=True,
+            capture_output=True,
+            cwd=ROOT,
+        )
+    except subprocess.CalledProcessError as exc:
+        print(f"[warn] gh pr create failed: {exc.stderr.strip()}")
 
 
 def start_vllm(model: str, port: int, tp: int, logdir: Path) -> subprocess.Popen:
