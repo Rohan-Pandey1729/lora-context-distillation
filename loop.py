@@ -16,6 +16,7 @@ import threading
 import time
 import uuid
 from pathlib import Path
+import shutil
 
 import yaml
 
@@ -727,14 +728,34 @@ def commit_and_pr(cfg: dict) -> None:
         f"- Run outputs: `runs/{run_id}/`\n"
     )
 
-    base = _git_default_branch()
-    _git("switch", "-c", branch, base)
+    try:
+        _git("switch", "-c", branch)
+    except subprocess.CalledProcessError:
+        _git("checkout", "-b", branch)
     _git("add", "-A")
     staged = _git("diff", "--cached", "--quiet", check=False)
     if staged.returncode == 0:
         return
     _git("commit", "-m", title)
-    _git("push", "-u", "origin", branch)
+    try:
+        _git("push", "-u", "origin", branch)
+    except subprocess.CalledProcessError as exc:
+        print(f"[warn] git push failed; skipping PR: {exc.stderr.strip()}")
+        return
+    if shutil.which("gh") is None:
+        print("[warn] gh not found; skipping PR creation")
+        return
+    auth = subprocess.run(
+        ["gh", "auth", "status", "-h", "github.com"],
+        check=False,
+        text=True,
+        capture_output=True,
+        cwd=ROOT,
+    )
+    if auth.returncode != 0:
+        print("[warn] gh not authenticated; skipping PR creation")
+        return
+    base = _git_default_branch()
     subprocess.run(
         [
             "gh",
