@@ -14,6 +14,7 @@ import tarfile
 import tempfile
 import threading
 import time
+import uuid
 from pathlib import Path
 
 import yaml
@@ -38,7 +39,11 @@ def _within_cwd(path: Path, root: Path) -> Path:
 
 def _set_local_dir_env(key: str, path: Path, root: Path) -> Path:
     if key in os.environ:
-        target = _within_cwd(Path(os.environ[key]).expanduser(), root)
+        try:
+            target = _within_cwd(Path(os.environ[key]).expanduser(), root)
+        except RuntimeError:
+            target = _within_cwd(path, root)
+            os.environ[key] = str(target)
     else:
         target = _within_cwd(path, root)
         os.environ[key] = str(target)
@@ -353,8 +358,11 @@ def run_swe(cfg: dict, port: int) -> None:
     # Ensure swebench sets the image for "singularity" while we provide a custom implementation.
     mswe_envs._ENVIRONMENT_MAPPING["singularity"] = "swe_singularity_env.SingularityEnvironment"
 
-    subset = cfg.get("swe", {}).get("dataset_repo")
-    split = cfg.get("swe", {}).get("split")
+    swe_cfg = cfg.get("swe", {}) or {}
+    subset = swe_cfg.get("dataset_repo")
+    split = swe_cfg.get("split")
+    slice_spec = swe_cfg.get("slice_spec") or "0:10"
+    filter_spec = swe_cfg.get("filter_spec") or ""
     if not subset or not split:
         raise RuntimeError("swe.dataset_repo and swe.split are required")
 
@@ -406,8 +414,8 @@ def run_swe(cfg: dict, port: int) -> None:
         swe_run.main(
             subset=subset,
             split=split,
-            slice_spec="",
-            filter_spec="",
+            slice_spec=slice_spec,
+            filter_spec=filter_spec,
             shuffle=False,
             output=str(out_dir),
             workers=1,
@@ -671,6 +679,83 @@ def snap_logs(cfg: dict) -> None:
         upload_path(repo, str(out_tar), "dataset")
 
 
+def _git(*args: str, check: bool = True) -> subprocess.CompletedProcess:
+    return subprocess.run(
+        ["git", *args],
+        check=check,
+        text=True,
+        capture_output=True,
+        cwd=ROOT,
+    )
+
+
+def _git_has_changes() -> bool:
+    res = _git("status", "--porcelain=v1", check=False)
+    return bool(res.stdout.strip())
+
+
+def _git_current_branch() -> str | None:
+    res = _git("rev-parse", "--abbrev-ref", "HEAD", check=False)
+    branch = res.stdout.strip()
+    if res.returncode != 0 or not branch or branch == "HEAD":
+        return None
+    return branch
+
+
+def _git_default_branch() -> str:
+    res = _git("symbolic-ref", "refs/remotes/origin/HEAD", check=False)
+    if res.returncode == 0:
+        ref = res.stdout.strip()
+        if ref.startswith("refs/remotes/origin/"):
+            return ref.rsplit("/", 1)[-1]
+    current = _git_current_branch()
+    return current or "main"
+
+
+def commit_and_pr(cfg: dict) -> None:
+    if not _git_has_changes():
+        return
+
+    run_id = cfg["run_id"]
+    stamp = time.strftime("%Y%m%d-%H%M%S")
+    suffix = uuid.uuid4().hex[:6]
+    branch = f"run/{run_id}-{stamp}-{suffix}"
+    title = f"Run {run_id} logs {stamp}"
+    body = (
+        f"Automated run artifacts for `{run_id}`.\n\n"
+        f"- Logs: `logs/`\n"
+        f"- Run outputs: `runs/{run_id}/`\n"
+    )
+
+    base = _git_default_branch()
+    _git("switch", "-c", branch, base)
+    _git("add", "-A")
+    staged = _git("diff", "--cached", "--quiet", check=False)
+    if staged.returncode == 0:
+        return
+    _git("commit", "-m", title)
+    _git("push", "-u", "origin", branch)
+    subprocess.run(
+        [
+            "gh",
+            "pr",
+            "create",
+            "--base",
+            base,
+            "--head",
+            branch,
+            "--title",
+            title,
+            "--body",
+            body,
+        ],
+        check=True,
+        text=True,
+        capture_output=True,
+        cwd=ROOT,
+    )
+
+
 def start_vllm(model: str, port: int, tp: int, logdir: Path) -> subprocess.Popen:
     logdir.mkdir(parents=True, exist_ok=True)
     stdout = (logdir / "server.stdout.log").open("w", encoding="utf-8")
@@ -735,6 +820,10 @@ def full_run() -> None:
         snap_logs(cfg)
     except Exception as exc:
         print(f"[warn] log snapshot failed: {exc}")
+    try:
+        commit_and_pr(cfg)
+    except Exception as exc:
+        print(f"[warn] git/pr automation failed: {exc}")
 
 
 def main() -> None:
