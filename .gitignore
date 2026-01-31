@@ -1,6 +1,6 @@
 /.hf/
 /results/
-/secrets/hf_token
+/secrets/
 *.tgz
 *.tar
 /.mambaforge/
