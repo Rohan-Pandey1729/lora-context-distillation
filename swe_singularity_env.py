@@ -21,6 +21,7 @@ DEFAULT_BIND_DIRS = [
     "/tmp",
     "/var/tmp",
     "/home",
+    "/mmfs1",
 ]
 DEFAULT_BIND_FILES = [
     "/etc/hosts",
@@ -28,6 +29,13 @@ DEFAULT_BIND_FILES = [
     "/etc/resolv.conf",
     "/etc/passwd",
     "/etc/group",
+]
+
+DEFAULT_NO_MOUNT = [
+    "cwd",
+    "bind-paths",
+    "hostfs",
+    "tmp",
 ]
 
 
@@ -52,6 +60,14 @@ def _resolve_local_path(path_str: str) -> Path:
     return _ensure_within_root(root / path, root)
 
 
+def _merge_no_mount(items: list[str]) -> list[str]:
+    merged: list[str] = []
+    for item in DEFAULT_NO_MOUNT + (items or []):
+        if item and item not in merged:
+            merged.append(item)
+    return merged
+
+
 @dataclass
 class SingularityEnvironmentConfig:
     image: str
@@ -70,7 +86,7 @@ class SingularityEnvironmentConfig:
     """Host path to bind into the container."""
     bind_container: str = "/work"
     """Container path to use for the bound host directory."""
-    no_mount: list[str] = field(default_factory=lambda: ["cwd", "bind-paths", "hostfs", "tmp", "/mmfs1"])
+    no_mount: list[str] = field(default_factory=lambda: list(DEFAULT_NO_MOUNT))
     """Apptainer mount categories to disable via --no-mount."""
     extra_bind_dirs: list[str] = field(default_factory=list)
     """Additional bind destinations to pre-create in the sandbox."""
@@ -89,6 +105,7 @@ class SingularityEnvironment:
         """Singularity environment. See `SingularityEnvironmentConfig` for kwargs."""
         self.logger = logger or logging.getLogger("minisweagent.environment")
         self.config = config_class(**kwargs)
+        self.config.no_mount = _merge_no_mount(self.config.no_mount)
         self._prepare_host_env()
         self.sandbox_dir = self._build_sandbox()
         self._bind_host: Path | None = None
