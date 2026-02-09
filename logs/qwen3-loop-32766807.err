@@ -1,0 +1,26 @@
+downloading uv 0.9.28 x86_64-unknown-linux-gnu
+Resolved 208 packages in 4ms
+Audited 201 packages in 111ms
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/loop.py", line 33, in _within_cwd
+    resolved.relative_to(root)
+  File "/gscratch/stf/rpande/lora-context-distillation/bin/uvpython/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/pathlib.py", line 818, in relative_to
+    raise ValueError("{!r} is not in the subpath of {!r}"
+ValueError: '/tmp/.apptainer-rpande' is not in the subpath of '/mmfs1/gscratch/stf/rpande/lora-context-distillation' OR one path is relative and the other is absolute.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/loop.py", line 793, in <module>
+    main()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/loop.py", line 754, in main
+    cfg = load_conf()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/loop.py", line 81, in load_conf
+    ensure_local_runtime_env()
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/loop.py", line 70, in ensure_local_runtime_env
+    _set_local_dir_env("APPTAINER_CACHEDIR", apptainer_root / "cache", root)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/loop.py", line 41, in _set_local_dir_env
+    target = _within_cwd(Path(os.environ[key]).expanduser(), root)
+  File "/mmfs1/gscratch/stf/rpande/lora-context-distillation/loop.py", line 35, in _within_cwd
+    raise RuntimeError(f"Path escapes cwd: {resolved}") from exc
+RuntimeError: Path escapes cwd: /tmp/.apptainer-rpande
