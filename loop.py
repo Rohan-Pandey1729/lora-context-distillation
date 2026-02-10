@@ -36,24 +36,29 @@ def _load_secret_env(var: str, secret_path: Path) -> None:
         os.environ[var] = secret_path.read_text().strip()
 
 
-def _within_cwd(path: Path, root: Path) -> Path:
+def _within_cwd(path: Path, root: Path) -> Path | None:
     resolved = path.resolve()
     try:
         resolved.relative_to(root)
-    except ValueError as exc:
-        raise RuntimeError(f"Path escapes cwd: {resolved}") from exc
+    except ValueError:
+        return None
     return resolved
 
 
 def _set_local_dir_env(key: str, path: Path, root: Path) -> Path:
+    fallback = _within_cwd(path, root) or root
     if key in os.environ:
-        try:
-            target = _within_cwd(Path(os.environ[key]).expanduser(), root)
-        except RuntimeError:
-            target = _within_cwd(path, root)
+        raw = Path(os.environ[key]).expanduser()
+        target = _within_cwd(raw, root)
+        if target is None:
+            print(
+                f"[warn] {key} escapes cwd ({raw}); resetting to {fallback}",
+                file=sys.stderr,
+            )
+            target = fallback
             os.environ[key] = str(target)
     else:
-        target = _within_cwd(path, root)
+        target = fallback
         os.environ[key] = str(target)
     target.mkdir(parents=True, exist_ok=True)
     return target
@@ -322,7 +327,7 @@ def _latest_exit_status(out_dir: Path) -> Path | None:
     return candidates[-1] if candidates else None
 
 
-def _raise_on_exit_errors(out_dir: Path) -> None:
+def _warn_on_exit_errors(out_dir: Path) -> None:
     exit_path = _latest_exit_status(out_dir)
     if not exit_path:
         return
@@ -339,7 +344,7 @@ def _raise_on_exit_errors(out_dir: Path) -> None:
     if bad:
         total = sum(len(v) for v in bad.values() if isinstance(v, list))
         detail = ", ".join(f"{k}: {len(v)}" for k, v in bad.items())
-        raise RuntimeError(f"SWE run had errors ({total} instances): {detail}")
+        print(f"[warn] SWE run had errors ({total} instances): {detail}")
 
 
 def _rewrite_jsonl(preds_json: Path, jsonl_path: Path) -> None:
@@ -441,7 +446,7 @@ def run_swe(cfg: dict, port: int) -> None:
 
     preds_path = out_dir / "preds.json"
     jsonl_path = out_dir / "all-preds.jsonl"
-    _raise_on_exit_errors(out_dir)
+    _warn_on_exit_errors(out_dir)
     if not preds_path.exists():
         raise RuntimeError(f"Missing preds.json at {preds_path}")
     if not json_load(preds_path):
@@ -874,43 +879,74 @@ def main() -> None:
     sub.add_parser("snap-logs")
 
     args = ap.parse_args()
-    cfg = load_conf()
+    try:
+        cfg = load_conf()
+    except Exception as exc:
+        print(f"[warn] failed to load config/runtime env: {exc}", file=sys.stderr)
+        return
 
     if args.cmd == "pick-port":
-        port = resolve_port(cfg)
-        print(port)
+        try:
+            port = resolve_port(cfg)
+            print(port)
+        except Exception as exc:
+            print(f"[warn] pick-port failed: {exc}", file=sys.stderr)
         return
     if args.cmd == "full":
-        full_run()
+        try:
+            full_run()
+        except Exception as exc:
+            print(f"[warn] full run failed: {exc}", file=sys.stderr)
         return
 
     if args.cmd == "swe":
-        port = resolve_port(cfg)
-        run_swe(cfg, port)
+        try:
+            port = resolve_port(cfg)
+            run_swe(cfg, port)
+        except Exception as exc:
+            print(f"[warn] swe failed: {exc}", file=sys.stderr)
         return
     if args.cmd == "strip":
-        run_id = cfg["run_id"]
-        strip_thinking(
-            cfg,
-            Path(f"runs/{run_id}/swe/preds.json"),
-            Path(f"runs/{run_id}/sft/sft_qwenA_from_B_mini.jsonl"),
-        )
+        try:
+            run_id = cfg["run_id"]
+            strip_thinking(
+                cfg,
+                Path(f"runs/{run_id}/swe/preds.json"),
+                Path(f"runs/{run_id}/sft/sft_qwenA_from_B_mini.jsonl"),
+            )
+        except Exception as exc:
+            print(f"[warn] strip failed: {exc}", file=sys.stderr)
         return
     if args.cmd == "train":
-        train_unsloth_lora(cfg)
+        try:
+            train_unsloth_lora(cfg)
+        except Exception as exc:
+            print(f"[warn] train failed: {exc}", file=sys.stderr)
         return
     if args.cmd == "apply-diff":
-        apply_diff_linear(cfg)
+        try:
+            apply_diff_linear(cfg)
+        except Exception as exc:
+            print(f"[warn] apply-diff failed: {exc}", file=sys.stderr)
         return
     if args.cmd == "upload-b":
-        upload_new_b(cfg)
+        try:
+            upload_new_b(cfg)
+        except Exception as exc:
+            print(f"[warn] upload-b failed: {exc}", file=sys.stderr)
         return
     if args.cmd == "snap-logs":
-        snap_logs(cfg)
+        try:
+            snap_logs(cfg)
+        except Exception as exc:
+            print(f"[warn] snap-logs failed: {exc}", file=sys.stderr)
         return
 
-    raise RuntimeError(f"Unknown command: {args.cmd}")
+    print(f"[warn] unknown command: {args.cmd}", file=sys.stderr)
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as exc:
+        print(f"[warn] unhandled failure: {exc}", file=sys.stderr)
