@@ -327,7 +327,7 @@ def _latest_exit_status(out_dir: Path) -> Path | None:
     return candidates[-1] if candidates else None
 
 
-def _warn_on_exit_errors(out_dir: Path) -> None:
+def _raise_on_exit_errors(out_dir: Path) -> None:
     exit_path = _latest_exit_status(out_dir)
     if not exit_path:
         return
@@ -344,7 +344,7 @@ def _warn_on_exit_errors(out_dir: Path) -> None:
     if bad:
         total = sum(len(v) for v in bad.values() if isinstance(v, list))
         detail = ", ".join(f"{k}: {len(v)}" for k, v in bad.items())
-        print(f"[warn] SWE run had errors ({total} instances): {detail}")
+        raise RuntimeError(f"SWE run had errors ({total} instances): {detail}")
 
 
 def _rewrite_jsonl(preds_json: Path, jsonl_path: Path) -> None:
@@ -446,7 +446,7 @@ def run_swe(cfg: dict, port: int) -> None:
 
     preds_path = out_dir / "preds.json"
     jsonl_path = out_dir / "all-preds.jsonl"
-    _warn_on_exit_errors(out_dir)
+    _raise_on_exit_errors(out_dir)
     if not preds_path.exists():
         raise RuntimeError(f"Missing preds.json at {preds_path}")
     if not json_load(preds_path):
@@ -879,74 +879,43 @@ def main() -> None:
     sub.add_parser("snap-logs")
 
     args = ap.parse_args()
-    try:
-        cfg = load_conf()
-    except Exception as exc:
-        print(f"[warn] failed to load config/runtime env: {exc}", file=sys.stderr)
-        return
+    cfg = load_conf()
 
     if args.cmd == "pick-port":
-        try:
-            port = resolve_port(cfg)
-            print(port)
-        except Exception as exc:
-            print(f"[warn] pick-port failed: {exc}", file=sys.stderr)
+        port = resolve_port(cfg)
+        print(port)
         return
     if args.cmd == "full":
-        try:
-            full_run()
-        except Exception as exc:
-            print(f"[warn] full run failed: {exc}", file=sys.stderr)
+        full_run()
         return
 
     if args.cmd == "swe":
-        try:
-            port = resolve_port(cfg)
-            run_swe(cfg, port)
-        except Exception as exc:
-            print(f"[warn] swe failed: {exc}", file=sys.stderr)
+        port = resolve_port(cfg)
+        run_swe(cfg, port)
         return
     if args.cmd == "strip":
-        try:
-            run_id = cfg["run_id"]
-            strip_thinking(
-                cfg,
-                Path(f"runs/{run_id}/swe/preds.json"),
-                Path(f"runs/{run_id}/sft/sft_qwenA_from_B_mini.jsonl"),
-            )
-        except Exception as exc:
-            print(f"[warn] strip failed: {exc}", file=sys.stderr)
+        run_id = cfg["run_id"]
+        strip_thinking(
+            cfg,
+            Path(f"runs/{run_id}/swe/preds.json"),
+            Path(f"runs/{run_id}/sft/sft_qwenA_from_B_mini.jsonl"),
+        )
         return
     if args.cmd == "train":
-        try:
-            train_unsloth_lora(cfg)
-        except Exception as exc:
-            print(f"[warn] train failed: {exc}", file=sys.stderr)
+        train_unsloth_lora(cfg)
         return
     if args.cmd == "apply-diff":
-        try:
-            apply_diff_linear(cfg)
-        except Exception as exc:
-            print(f"[warn] apply-diff failed: {exc}", file=sys.stderr)
+        apply_diff_linear(cfg)
         return
     if args.cmd == "upload-b":
-        try:
-            upload_new_b(cfg)
-        except Exception as exc:
-            print(f"[warn] upload-b failed: {exc}", file=sys.stderr)
+        upload_new_b(cfg)
         return
     if args.cmd == "snap-logs":
-        try:
-            snap_logs(cfg)
-        except Exception as exc:
-            print(f"[warn] snap-logs failed: {exc}", file=sys.stderr)
+        snap_logs(cfg)
         return
 
-    print(f"[warn] unknown command: {args.cmd}", file=sys.stderr)
+    raise RuntimeError(f"Unknown command: {args.cmd}")
 
 
 if __name__ == "__main__":
-    try:
-        main()
-    except Exception as exc:
-        print(f"[warn] unhandled failure: {exc}", file=sys.stderr)
+    main()
