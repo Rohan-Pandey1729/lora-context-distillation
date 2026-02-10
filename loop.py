@@ -327,7 +327,7 @@ def _latest_exit_status(out_dir: Path) -> Path | None:
     return candidates[-1] if candidates else None
 
 
-def _raise_on_exit_errors(out_dir: Path) -> None:
+def _log_exit_errors(out_dir: Path) -> None:
     exit_path = _latest_exit_status(out_dir)
     if not exit_path:
         return
@@ -344,7 +344,7 @@ def _raise_on_exit_errors(out_dir: Path) -> None:
     if bad:
         total = sum(len(v) for v in bad.values() if isinstance(v, list))
         detail = ", ".join(f"{k}: {len(v)}" for k, v in bad.items())
-        raise RuntimeError(f"SWE run had errors ({total} instances): {detail}")
+        print(f"[warn] SWE run had errors ({total} instances): {detail}", file=sys.stderr)
 
 
 def _rewrite_jsonl(preds_json: Path, jsonl_path: Path) -> None:
@@ -446,7 +446,7 @@ def run_swe(cfg: dict, port: int) -> None:
 
     preds_path = out_dir / "preds.json"
     jsonl_path = out_dir / "all-preds.jsonl"
-    _raise_on_exit_errors(out_dir)
+    _log_exit_errors(out_dir)
     if not preds_path.exists():
         raise RuntimeError(f"Missing preds.json at {preds_path}")
     if not json_load(preds_path):
